@@ -145,34 +145,34 @@
 <!-- Left: Gallery Carousel -->
 <div class="lg:col-span-7 space-y-6">
 <div class="relative aspect-[4/3] bg-surface-container-low rounded-3xl overflow-hidden border border-outline-variant group shadow-sm">
-<img alt="Premium Turmeric Fingers Close-up" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtYMYU-Jh3SGpTH4XGvC1OIhFiQvYVJM9MT24HP976kJm4HSQImS3-iKKlFZ84wNVrJ0rMcgulk9zBzd79eboIY6GXl9Ft6pfjEJoRPNj2bhvZCja4EjutfwDKvTI4xQyk7vJCj04_KLgEsg7z3r-fJTetybyJU0_QoZ6_CkU2DzYlvmKVK-XXPcSKY6FSqIJQUxZqemB66O8_sslcTE9wI9cRnnN_HJRpmMhC0hhEgKmKlXkI5z7-7w"/>
+<img id="main-product-image" alt="Premium Turmeric Fingers Close-up" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtYMYU-Jh3SGpTH4XGvC1OIhFiQvYVJM9MT24HP976kJm4HSQImS3-iKKlFZ84wNVrJ0rMcgulk9zBzd79eboIY6GXl9Ft6pfjEJoRPNj2bhvZCja4EjutfwDKvTI4xQyk7vJCj04_KLgEsg7z3r-fJTetybyJU0_QoZ6_CkU2DzYlvmKVK-XXPcSKY6FSqIJQUxZqemB66O8_sslcTE9wI9cRnnN_HJRpmMhC0hhEgKmKlXkI5z7-7w"/>
 <div class="absolute inset-x-0 bottom-0 p-8 flex justify-between items-center bg-gradient-to-t from-black/50 to-transparent">
-<div class="flex gap-3">
-<span class="w-10 h-1.5 bg-primary rounded-full transition-all duration-300"></span>
-<span class="w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer"></span>
-<span class="w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer"></span>
+<div class="flex gap-3" id="dot-indicators">
+<span class="w-10 h-1.5 bg-primary rounded-full transition-all duration-300" data-index="0"></span>
+<span class="w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer" data-index="1"></span>
+<span class="w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer" data-index="2"></span>
 </div>
 <div class="flex gap-2">
-<button class="bg-white/95 p-3 rounded-full hover:bg-white transition-all shadow-lg active:scale-90">
+<button class="bg-white/95 p-3 rounded-full hover:bg-white transition-all shadow-lg active:scale-90" id="prev-btn">
 <span class="material-symbols-outlined text-primary font-bold">chevron_left</span>
 </button>
-<button class="bg-white/95 p-3 rounded-full hover:bg-white transition-all shadow-lg active:scale-90">
+<button class="bg-white/95 p-3 rounded-full hover:bg-white transition-all shadow-lg active:scale-90" id="next-btn">
 <span class="material-symbols-outlined text-primary font-bold">chevron_right</span>
 </button>
 </div>
 </div>
 </div>
-<div class="grid grid-cols-4 gap-4">
-<div class="aspect-square rounded-xl border-2 border-primary overflow-hidden cursor-pointer shadow-sm">
+<div class="grid grid-cols-4 gap-4" id="thumbnails">
+<div class="aspect-square rounded-xl border-2 border-primary overflow-hidden cursor-pointer shadow-sm" data-index="0">
 <img alt="Turmeric Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2vBS7SE_yvtCIdm5IHFwPe2729dHpDwbumpa30mJIsfVNVFi6hwwiyWQrvEY3hL0OVHaj3siERAGfUDu-n-6OSfQkDOGzXVim1t2VgHoz-_SIC9ftlmvbfdRuRq_Bw9YHsYBTE2hvGlog7LSbnZjeV67xqVL5gFgrfcO5E-Vy_MRcdRIhreXfoZ9RV134E_TH5dv76vrSL7LVIikES78lyslCiWEbWC2wLhnyhLigZ2vKs729wgpdgw"/>
 </div>
-<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100">
+<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100" data-index="1">
 <img alt="Sorting Process" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBncnMEoCGQxtNImYMwvRj9cetYi89Z2fX40wFhVODcKiIKnBOxpr62ZfeP62Js_5khEjPWQJbEl8utjO90eCtIBDQIK5GUAKEHYMOKDf2T7L_ejiMEC6UQg3Vl8NGUlIYzChrBxvEYp8_gkOKGxFZn7ClGDulzjs7jBrbHuolqZn2-HZWEzNTFDyhIFGOYEWt5uJpOkL3XMvoN3VI9vx2Sxt7NjJmw77bDSu-YqsSsS4GxCLBz0hzzyA"/>
 </div>
-<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100">
+<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100" data-index="2">
 <img alt="Warehouse Packaging" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcof0ceJGblBUsKCJnzLLulZ3l5RaDtorXPdwABXJkP5zNX2UbKdjUcc3jt8f4jSUj7SBbASI3Au1PmzmrnuIvnBd2pLsjHQMyU_W_w_tSua3OFbo1vkySJjWDOuPZ3Nx90bHqrDSUdK7GelGtq3OrCLtCffjsC-OKSOaSnI8YKO1FZ-4zaq0HS0mHaxRi-ub2QYnnSnRYMX050f3xEw0B0PVtkJpD_JWDgxmntrd-T2X_iYduNhJu8g"/>
 </div>
-<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100">
+<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100" data-index="3">
 <img alt="Specification Sheet" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBpDPm5j2NBLOERiy4AoscKgYljaCF8UFNEVGGtKcwtDpnp1kIlQTCv-CK_nqsU9BOo6HJBFQxVysxQzsPl74g2msD4GxVwLyUKxTOzXnxUdYeCKRVw9h743rgPmyqr-jiEQrSAaqVVL0hO0Tlzw0tN1gGhvO_AF6PNJJArxa8zfwbZEC6Yy7ik7xDxBtwTFSB-gdr8j0vGoRYbke1RxyAizPFNmkZ8jqVCgw7iq3m9aMpOIRaEITWxg"/>
 </div>
 </div>
@@ -186,7 +186,7 @@
 </div>
 <h2 class="font-headline-md text-headline-md text-on-background mb-4">Product Specifications</h2>
 <p class="font-body-md text-body-md text-on-surface-variant">
-                    Our Premium Turmeric Fingers are sourced directly from established local markets. We offer double-polished fingers known for their consistent internal color and adherence to international standard trade parameters. I personally oversee the procurement to ensure you get exactly what is promised.
+                    Our Premium Turmeric Fingers are sourced directly from established local markets. We offer double-polished fingers known for their consistent internal color and adherence to international standard trade parameters. We personally oversee the procurement to ensure you get exactly what is promised.
                 </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4">
@@ -255,16 +255,44 @@
 <script src="../components/loader.js"></script>
 <script>
     document.addEventListener('partialsLoaded', function () {
-        const thumbnails = document.querySelectorAll('.grid-cols-4 > div');
-        thumbnails.forEach(thumb => {
-            thumb.addEventListener('click', () => {
-                thumbnails.forEach(t => {
-                    t.classList.remove('border-primary', 'border-2');
-                    t.classList.add('border-outline-variant', 'border');
-                });
-                thumb.classList.add('border-primary', 'border-2');
-                thumb.classList.remove('border-outline-variant', 'border');
+        const images = [
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDtYMYU-Jh3SGpTH4XGvC1OIhFiQvYVJM9MT24HP976kJm4HSQImS3-iKKlFZ84wNVrJ0rMcgulk9zBzd79eboIY6GXl9Ft6pfjEJoRPNj2bhvZCja4EjutfwDKvTI4xQyk7vJCj04_KLgEsg7z3r-fJTetybyJU0_QoZ6_CkU2DzYlvmKVK-XXPcSKY6FSqIJQUxZqemB66O8_sslcTE9wI9cRnnN_HJRpmMhC0hhEgKmKlXkI5z7-7w',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuBncnMEoCGQxtNImYMwvRj9cetYi89Z2fX40wFhVODcKiIKnBOxpr62ZfeP62Js_5khEjPWQJbEl8utjO90eCtIBDQIK5GUAKEHYMOKDf2T7L_ejiMEC6UQg3Vl8NGUlIYzChrBxvEYp8_gkOKGxFZn7ClGDulzjs7jBrbHuolqZn2-HZWEzNTFDyhIFGOYEWt5uJpOkL3XMvoN3VI9vx2Sxt7NjJmw77bDSu-YqsSsS4GxCLBz0hzzyA',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuBcof0ceJGblBUsKCJnzLLulZ3l5RaDtorXPdwABXJkP5zNX2UbKdjUcc3jt8f4jSUj7SBbASI3Au1PmzmrnuIvnBd2pLsjHQMyU_W_w_tSua3OFbo1vkySJjWDOuPZ3Nx90bHqrDSUdK7GelGtq3OrCLtCffjsC-OKSOaSnI8YKO1FZ-4zaq0HS0mHaxRi-ub2QYnnSnRYMX050f3xEw0B0PVtkJpD_JWDgxmntrd-T2X_iYduNhJu8g',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuBBpDPm5j2NBLOERiy4AoscKgYljaCF8UFNEVGGtKcwtDpnp1kIlQTCv-CK_nqsU9BOo6HJBFQxVysxQzsPl74g2msD4GxVwLyUKxTOzXnxUdYeCKRVw9h743rgPmyqr-jiEQrSAaqVVL0hO0Tlzw0tN1gGhvO_AF6PNJJArxa8zfwbZEC6Yy7ik7xDxBtwTFSB-gdr8j0vGoRYbke1RxyAizPFNmkZ8jqVCgw7iq3m9aMpOIRaEITWxg'
+        ];
+        let current = 0;
+        const mainImg = document.getElementById('main-product-image');
+        const dots = document.querySelectorAll('#dot-indicators span');
+        const thumbs = document.querySelectorAll('#thumbnails > div');
+
+        function updateGallery(index) {
+            current = index;
+            mainImg.src = images[current];
+            dots.forEach((dot, i) => {
+                dot.className = i === current
+                    ? 'w-10 h-1.5 bg-primary rounded-full transition-all duration-300'
+                    : 'w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer';
             });
+            thumbs.forEach((thumb, i) => {
+                const isActive = i === current;
+                thumb.className = isActive
+                    ? 'aspect-square rounded-xl border-2 border-primary overflow-hidden cursor-pointer shadow-sm'
+                    : 'aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100';
+            });
+        }
+
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            updateGallery(current === 0 ? images.length - 1 : current - 1);
+        });
+        document.getElementById('next-btn').addEventListener('click', () => {
+            updateGallery(current === images.length - 1 ? 0 : current + 1);
+        });
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => updateGallery(parseInt(thumb.dataset.index)));
+        });
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => updateGallery(parseInt(dot.dataset.index)));
         });
     });
 </script>
