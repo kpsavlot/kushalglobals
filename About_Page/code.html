@@ -284,25 +284,41 @@
 <div class="p-8 bg-white border border-outline-variant rounded-lg hover:border-primary transition-colors group">
 <div class="text-primary mb-4 transition-transform group-hover:scale-110">
 <span class="material-symbols-outlined text-[40px]">account_circle</span>
-    <div data-include="../components/footer.html"></div>
-    <div data-include="../components/whatsapp.html"></div>
-    <script src="../components/loader.js"></script>
-    <script>
-        document.addEventListener('partialsLoaded', function () {
-            const revealElements = document.querySelectorAll('.card-hover, section h2, section p, .group.overflow-hidden');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('opacity-100', 'translate-y-0');
-                        entry.target.classList.remove('opacity-0', 'translate-y-4');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            revealElements.forEach(el => {
-                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
-                observer.observe(el);
+</div>
+<h4 class="font-headline-sm text-on-background mb-2">Personalized Service</h4>
+<p class="text-on-surface-variant">Enjoy direct, professional communication. You are never just another number in a large corporate machine.</p>
+</div>
+<!-- Reason 4 -->
+<div class="p-8 bg-white border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+<div class="text-primary mb-4 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[40px]">shield_with_heart</span>
+</div>
+<h4 class="font-headline-sm text-on-background mb-2">Reliable Partnership</h4>
+<p class="text-on-surface-variant">A commitment to honesty and transparency. We build long-term relationships based on mutual trust.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div data-include="../components/footer.html"></div>
+<div data-include="../components/whatsapp.html"></div>
+<script src="../components/loader.js"></script>
+<script>
+    document.addEventListener('partialsLoaded', function () {
+        const revealElements = document.querySelectorAll('.card-hover, section h2, section p, .group.overflow-hidden');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
             });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(el);
         });
-    </script>
+    });
+</script>
 </body></html>
