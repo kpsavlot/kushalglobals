@@ -3,7 +3,7 @@
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Product Details | KUSHAL GLOBALS</title>
+<title id="page-title">Product Details | KUSHAL GLOBALS</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -124,19 +124,17 @@
 <!-- Mini Hero Banner -->
 <section class="mt-8 relative h-[307px] min-h-[240px] flex items-center overflow-hidden mx-margin-desktop rounded-3xl">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCA8n1bLhqap8DLPI9ldo2_Cy0AXdG_6xkpQXvpiqcTrk-LJLAjV8_UTVqp04knXEfv-DPG9zXcQnKYGAXvVqm7-z2H9AEURIzUbLgbjT-oZVnzlxKhXE5irvjI-0qfsGf27PPPu6XeCjZ0MOcNvDuOV9NPKq0Ubfm41L9FodFhXNQUgKRaOPSFwvE4PLCBoiKhfrEZFQKsW91LkcNAllFwa2huKxNMA-c3kmWAadArOh5F-ppOkFXEsg')"></div>
+<div id="hero-bg" class="w-full h-full bg-cover bg-center" style="background-image: url('')"></div>
 <div class="absolute inset-0 bg-primary/20 backdrop-overlay transition-opacity"></div>
 </div>
 <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full text-white">
 <nav class="flex items-center gap-2 text-caption font-label-md mb-4 uppercase tracking-widest opacity-80">
-<span>Products</span>
+<span id="breadcrumb-category"></span>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<span>Spices</span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<span class="text-white font-bold">Premium Turmeric Fingers</span>
+<span id="breadcrumb-product" class="text-white font-bold"></span>
 </nav>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-2">Premium Turmeric Fingers</h1>
-<p class="font-body-lg text-body-lg text-white/90 max-w-2xl">High-curcumin content sourced from the major turmeric belts of Erode and Nizamabad.</p>
+<h1 id="product-title" class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-2"></h1>
+<p id="product-hero-desc" class="font-body-lg text-body-lg text-white/90 max-w-2xl"></p>
 </div>
 </section>
 <!-- Product Detail Split Layout -->
@@ -145,13 +143,9 @@
 <!-- Left: Gallery Carousel -->
 <div class="lg:col-span-7 space-y-6">
 <div class="relative aspect-[4/3] bg-surface-container-low rounded-3xl overflow-hidden border border-outline-variant group shadow-sm">
-<img id="main-product-image" alt="Premium Turmeric Fingers Close-up" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtYMYU-Jh3SGpTH4XGvC1OIhFiQvYVJM9MT24HP976kJm4HSQImS3-iKKlFZ84wNVrJ0rMcgulk9zBzd79eboIY6GXl9Ft6pfjEJoRPNj2bhvZCja4EjutfwDKvTI4xQyk7vJCj04_KLgEsg7z3r-fJTetybyJU0_QoZ6_CkU2DzYlvmKVK-XXPcSKY6FSqIJQUxZqemB66O8_sslcTE9wI9cRnnN_HJRpmMhC0hhEgKmKlXkI5z7-7w"/>
+<img id="main-product-image" alt="" class="w-full h-full object-cover" src=""/>
 <div class="absolute inset-x-0 bottom-0 p-8 flex justify-between items-center bg-gradient-to-t from-black/50 to-transparent">
-<div class="flex gap-3" id="dot-indicators">
-<span class="w-10 h-1.5 bg-primary rounded-full transition-all duration-300" data-index="0"></span>
-<span class="w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer" data-index="1"></span>
-<span class="w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer" data-index="2"></span>
-</div>
+<div class="flex gap-3" id="dot-indicators"></div>
 <div class="flex gap-2">
 <button class="bg-white/95 p-3 rounded-full hover:bg-white transition-all shadow-lg active:scale-90" id="prev-btn">
 <span class="material-symbols-outlined text-primary font-bold">chevron_left</span>
@@ -162,60 +156,45 @@
 </div>
 </div>
 </div>
-<div class="grid grid-cols-4 gap-4" id="thumbnails">
-<div class="aspect-square rounded-xl border-2 border-primary overflow-hidden cursor-pointer shadow-sm" data-index="0">
-<img alt="Turmeric Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2vBS7SE_yvtCIdm5IHFwPe2729dHpDwbumpa30mJIsfVNVFi6hwwiyWQrvEY3hL0OVHaj3siERAGfUDu-n-6OSfQkDOGzXVim1t2VgHoz-_SIC9ftlmvbfdRuRq_Bw9YHsYBTE2hvGlog7LSbnZjeV67xqVL5gFgrfcO5E-Vy_MRcdRIhreXfoZ9RV134E_TH5dv76vrSL7LVIikES78lyslCiWEbWC2wLhnyhLigZ2vKs729wgpdgw"/>
-</div>
-<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100" data-index="1">
-<img alt="Sorting Process" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBncnMEoCGQxtNImYMwvRj9cetYi89Z2fX40wFhVODcKiIKnBOxpr62ZfeP62Js_5khEjPWQJbEl8utjO90eCtIBDQIK5GUAKEHYMOKDf2T7L_ejiMEC6UQg3Vl8NGUlIYzChrBxvEYp8_gkOKGxFZn7ClGDulzjs7jBrbHuolqZn2-HZWEzNTFDyhIFGOYEWt5uJpOkL3XMvoN3VI9vx2Sxt7NjJmw77bDSu-YqsSsS4GxCLBz0hzzyA"/>
-</div>
-<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100" data-index="2">
-<img alt="Warehouse Packaging" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcof0ceJGblBUsKCJnzLLulZ3l5RaDtorXPdwABXJkP5zNX2UbKdjUcc3jt8f4jSUj7SBbASI3Au1PmzmrnuIvnBd2pLsjHQMyU_W_w_tSua3OFbo1vkySJjWDOuPZ3Nx90bHqrDSUdK7GelGtq3OrCLtCffjsC-OKSOaSnI8YKO1FZ-4zaq0HS0mHaxRi-ub2QYnnSnRYMX050f3xEw0B0PVtkJpD_JWDgxmntrd-T2X_iYduNhJu8g"/>
-</div>
-<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100" data-index="3">
-<img alt="Specification Sheet" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBpDPm5j2NBLOERiy4AoscKgYljaCF8UFNEVGGtKcwtDpnp1kIlQTCv-CK_nqsU9BOo6HJBFQxVysxQzsPl74g2msD4GxVwLyUKxTOzXnxUdYeCKRVw9h743rgPmyqr-jiEQrSAaqVVL0hO0Tlzw0tN1gGhvO_AF6PNJJArxa8zfwbZEC6Yy7ik7xDxBtwTFSB-gdr8j0vGoRYbke1RxyAizPFNmkZ8jqVCgw7iq3m9aMpOIRaEITWxg"/>
-</div>
-</div>
+<div class="grid grid-cols-4 gap-4" id="thumbnails"></div>
 </div>
 <!-- Right: Details & Inquiry -->
 <div class="lg:col-span-5 space-y-8">
 <div class="border-b border-outline-variant pb-6">
 <div class="flex items-center gap-3 mb-4">
-<span class="bg-primary/10 text-primary px-3 py-1 text-label-md font-bold rounded uppercase tracking-wider">Premium Export Quality</span>
-<span class="text-on-surface-variant text-label-md">SKU: KG-SPC-TM01</span>
+<span id="product-badge" class="bg-primary/10 text-primary px-3 py-1 text-label-md font-bold rounded uppercase tracking-wider"></span>
+<span id="product-sku" class="text-on-surface-variant text-label-md"></span>
 </div>
-<h2 class="font-headline-md text-headline-md text-on-background mb-4">Product Specifications</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                    Our Premium Turmeric Fingers are sourced directly from established local markets. We offer double-polished fingers known for their consistent internal color and adherence to international standard trade parameters. We personally oversee the procurement to ensure you get exactly what is promised.
-                </p>
+<h2 id="product-headline" class="font-headline-md text-headline-md text-on-background mb-4">Product Specifications</h2>
+<p id="product-description" class="font-body-md text-body-md text-on-surface-variant"></p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4">
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary">location_on</span>
 <div>
 <p class="text-label-md font-label-md text-on-surface-variant uppercase">Origin</p>
-<p class="font-body-md font-semibold">India (Erode/Nizamabad)</p>
+<p id="product-origin" class="font-body-md font-semibold"></p>
 </div>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary">grid_view</span>
 <div>
 <p class="text-label-md font-label-md text-on-surface-variant uppercase">Variety</p>
-<p class="font-body-md font-semibold">Double Polished Fingers</p>
+<p id="product-variety" class="font-body-md font-semibold"></p>
 </div>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary">inventory_2</span>
 <div>
 <p class="text-label-md font-label-md text-on-surface-variant uppercase">Standard Packing</p>
-<p class="font-body-md font-semibold">25kg / 50kg Jute/PP Bags</p>
+<p id="product-packing" class="font-body-md font-semibold"></p>
 </div>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary">local_shipping</span>
 <div>
 <p class="text-label-md font-label-md text-on-surface-variant uppercase">Logistics</p>
-<p class="font-body-md font-semibold">FOB/CIF Global Ports</p>
+<p id="product-logistics" class="font-body-md font-semibold"></p>
 </div>
 </div>
 </div>
@@ -255,45 +234,99 @@
 <script src="../components/loader.js"></script>
 <script>
     document.addEventListener('partialsLoaded', function () {
-        const images = [
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDtYMYU-Jh3SGpTH4XGvC1OIhFiQvYVJM9MT24HP976kJm4HSQImS3-iKKlFZ84wNVrJ0rMcgulk9zBzd79eboIY6GXl9Ft6pfjEJoRPNj2bhvZCja4EjutfwDKvTI4xQyk7vJCj04_KLgEsg7z3r-fJTetybyJU0_QoZ6_CkU2DzYlvmKVK-XXPcSKY6FSqIJQUxZqemB66O8_sslcTE9wI9cRnnN_HJRpmMhC0hhEgKmKlXkI5z7-7w',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuBncnMEoCGQxtNImYMwvRj9cetYi89Z2fX40wFhVODcKiIKnBOxpr62ZfeP62Js_5khEjPWQJbEl8utjO90eCtIBDQIK5GUAKEHYMOKDf2T7L_ejiMEC6UQg3Vl8NGUlIYzChrBxvEYp8_gkOKGxFZn7ClGDulzjs7jBrbHuolqZn2-HZWEzNTFDyhIFGOYEWt5uJpOkL3XMvoN3VI9vx2Sxt7NjJmw77bDSu-YqsSsS4GxCLBz0hzzyA',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuBcof0ceJGblBUsKCJnzLLulZ3l5RaDtorXPdwABXJkP5zNX2UbKdjUcc3jt8f4jSUj7SBbASI3Au1PmzmrnuIvnBd2pLsjHQMyU_W_w_tSua3OFbo1vkySJjWDOuPZ3Nx90bHqrDSUdK7GelGtq3OrCLtCffjsC-OKSOaSnI8YKO1FZ-4zaq0HS0mHaxRi-ub2QYnnSnRYMX050f3xEw0B0PVtkJpD_JWDgxmntrd-T2X_iYduNhJu8g',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuBBpDPm5j2NBLOERiy4AoscKgYljaCF8UFNEVGGtKcwtDpnp1kIlQTCv-CK_nqsU9BOo6HJBFQxVysxQzsPl74g2msD4GxVwLyUKxTOzXnxUdYeCKRVw9h743rgPmyqr-jiEQrSAaqVVL0hO0Tlzw0tN1gGhvO_AF6PNJJArxa8zfwbZEC6Yy7ik7xDxBtwTFSB-gdr8j0vGoRYbke1RxyAizPFNmkZ8jqVCgw7iq3m9aMpOIRaEITWxg'
-        ];
-        let current = 0;
-        const mainImg = document.getElementById('main-product-image');
-        const dots = document.querySelectorAll('#dot-indicators span');
-        const thumbs = document.querySelectorAll('#thumbnails > div');
+        const params = new URLSearchParams(window.location.search);
+        const productKey = params.get('product') || 'turmeric';
 
-        function updateGallery(index) {
-            current = index;
-            mainImg.src = images[current];
-            dots.forEach((dot, i) => {
-                dot.className = i === current
-                    ? 'w-10 h-1.5 bg-primary rounded-full transition-all duration-300'
-                    : 'w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer';
-            });
-            thumbs.forEach((thumb, i) => {
-                const isActive = i === current;
-                thumb.className = isActive
-                    ? 'aspect-square rounded-xl border-2 border-primary overflow-hidden cursor-pointer shadow-sm'
-                    : 'aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100';
-            });
-        }
+        fetch('products.json')
+            .then(r => r.json())
+            .then(products => {
+                const product = products[productKey];
+                if (!product) {
+                    document.body.innerHTML = '<div style="padding:4rem;text-align:center;"><h1>Product not found</h1><a href="../Portfolio_Page/code.html">Back to products</a></div>';
+                    return;
+                }
 
-        document.getElementById('prev-btn').addEventListener('click', () => {
-            updateGallery(current === 0 ? images.length - 1 : current - 1);
-        });
-        document.getElementById('next-btn').addEventListener('click', () => {
-            updateGallery(current === images.length - 1 ? 0 : current + 1);
-        });
-        thumbs.forEach(thumb => {
-            thumb.addEventListener('click', () => updateGallery(parseInt(thumb.dataset.index)));
-        });
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => updateGallery(parseInt(dot.dataset.index)));
-        });
+                document.getElementById('page-title').textContent = product.name + ' | KUSHAL GLOBALS';
+                document.getElementById('breadcrumb-category').textContent = product.category;
+                document.getElementById('breadcrumb-product').textContent = product.name;
+                document.getElementById('product-title').textContent = product.name;
+                document.getElementById('product-hero-desc').textContent = product.heroDesc;
+                document.getElementById('hero-bg').style.backgroundImage = 'url(' + product.heroBg + ')';
+                document.getElementById('product-badge').textContent = product.badge;
+                document.getElementById('product-sku').textContent = 'SKU: ' + product.sku;
+                document.getElementById('product-headline').textContent = 'Product Specifications';
+                document.getElementById('product-description').textContent = product.description;
+                document.getElementById('product-origin').textContent = product.origin;
+                document.getElementById('product-variety').textContent = product.variety;
+                document.getElementById('product-packing').textContent = product.packing;
+                document.getElementById('product-logistics').textContent = product.logistics;
+
+                const images = product.images;
+                const mainImg = document.getElementById('main-product-image');
+                mainImg.alt = product.name;
+                mainImg.src = images[0];
+
+                const dotsContainer = document.getElementById('dot-indicators');
+                const thumbsContainer = document.getElementById('thumbnails');
+                dotsContainer.innerHTML = '';
+                thumbsContainer.innerHTML = '';
+
+                images.forEach((src, i) => {
+                    const dot = document.createElement('span');
+                    dot.dataset.index = i;
+                    dot.className = i === 0
+                        ? 'w-10 h-1.5 bg-primary rounded-full transition-all duration-300'
+                        : 'w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer';
+                    dotsContainer.appendChild(dot);
+
+                    const thumb = document.createElement('div');
+                    thumb.dataset.index = i;
+                    thumb.className = i === 0
+                        ? 'aspect-square rounded-xl border-2 border-primary overflow-hidden cursor-pointer shadow-sm'
+                        : 'aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100';
+                    const img = document.createElement('img');
+                    img.alt = product.name + ' ' + (i + 1);
+                    img.className = 'w-full h-full object-cover';
+                    img.src = src;
+                    thumb.appendChild(img);
+                    thumbsContainer.appendChild(thumb);
+                });
+
+                let current = 0;
+                const dots = dotsContainer.querySelectorAll('span');
+                const thumbs = thumbsContainer.querySelectorAll('div');
+
+                function updateGallery(index) {
+                    current = index;
+                    mainImg.src = images[current];
+                    dots.forEach((dot, i) => {
+                        dot.className = i === current
+                            ? 'w-10 h-1.5 bg-primary rounded-full transition-all duration-300'
+                            : 'w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer';
+                    });
+                    thumbs.forEach((thumb, i) => {
+                        thumb.className = i === current
+                            ? 'aspect-square rounded-xl border-2 border-primary overflow-hidden cursor-pointer shadow-sm'
+                            : 'aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100';
+                    });
+                }
+
+                document.getElementById('prev-btn').addEventListener('click', () => {
+                    updateGallery(current === 0 ? images.length - 1 : current - 1);
+                });
+                document.getElementById('next-btn').addEventListener('click', () => {
+                    updateGallery(current === images.length - 1 ? 0 : current + 1);
+                });
+                thumbs.forEach(thumb => {
+                    thumb.addEventListener('click', () => updateGallery(parseInt(thumb.dataset.index)));
+                });
+                dots.forEach(dot => {
+                    dot.addEventListener('click', () => updateGallery(parseInt(dot.dataset.index)));
+                });
+            })
+            .catch(() => {
+                document.body.innerHTML = '<div style="padding:4rem;text-align:center;"><h1>Failed to load product data</h1></div>';
+            });
     });
 </script>
 </body></html>
