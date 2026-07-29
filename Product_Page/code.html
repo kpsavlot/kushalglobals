@@ -129,8 +129,8 @@
 </div>
 <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full text-white">
 <nav class="flex items-center gap-2 text-caption font-label-md mb-4 uppercase tracking-widest opacity-80">
-<span id="breadcrumb-category"></span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-white transition-colors" href="../Portfolio_Page/code.html">Products</a>
+<span>/</span>
 <span id="breadcrumb-product" class="text-white font-bold"></span>
 </nav>
 <h1 id="product-title" class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-2"></h1>
@@ -247,7 +247,6 @@
                 }
 
                 document.getElementById('page-title').textContent = product.name + ' | KUSHAL GLOBALS';
-                document.getElementById('breadcrumb-category').textContent = product.category;
                 document.getElementById('breadcrumb-product').textContent = product.name;
                 document.getElementById('product-title').textContent = product.name;
                 document.getElementById('product-hero-desc').textContent = product.heroDesc;

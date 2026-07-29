@@ -1,11 +1,11 @@
 {
   "onions": {
-    "name": "Fresh Red Onion",
+    "name": "Fresh Onion",
     "category": "Vegetables",
-    "sku": "KG-VEG-ON01",
-    "badge": "Premium Export Quality",
-    "tagline": "Consistent Grade-A Quality",
-    "description": "Our Fresh Red Onions are sourced from the premier growing regions of Maharashtra and Karnataka. We ensure strict quality control for size, firmness, and skin integrity, making them ideal for both domestic and international markets. Each shipment is personally inspected to guarantee the highest export standards.",
+    "sku": "KG-ON-001",
+    "badge": "Bestseller",
+    "tagline": "Premium quality red onions sourced directly from the finest farms in India.",
+    "description": "Our Fresh Onions are sourced from the premier growing regions of Maharashtra and Karnataka. We ensure strict quality control for size, firmness, and skin integrity, making them ideal for both domestic and international markets. Each shipment is personally inspected to guarantee the highest export standards.",
     "heroBg": "https://lh3.googleusercontent.com/aida-public/AB6AXuBZbMFV6-bboGpI05xfPPIg6w3_lECkoePtj5H8rncAD1AEcIFFGbbsNEsok3UpJAiA36jvppxcvZts_uJEZ3I3aj6O7r7Nr-Ltq9Dp8zO4VFn8tMBdKvCN0b24iMNY4kXiFYAcAxyxzPVCZw5O-u88c2hy0MSqlIAV6vWrjEW7-S5tCLvw0sbJElETeaeXJA89bepEtaoRoaZInqNJQtwrYdMUSkstjjtMqMahS9QHqDOC_hoAawiu8Q",
     "heroDesc": "Premium quality red onions with consistent sizing and long shelf life, sourced directly from trusted farms.",
     "origin": "India (Maharashtra/Karnataka)",
