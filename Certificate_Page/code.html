@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Certificates | KUSHAL GLOBALS - Trusted Merchant Exporter</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dadad8",
+                        "on-background": "#1a1c1b",
+                        "inverse-primary": "#7cd7c3",
+                        "secondary-fixed": "#e0e2e8",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2f3130",
+                        "secondary": "#5b5f63",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e0e2e8",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#005045",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "background": "#f9f9f7",
+                        "on-surface-variant": "#3e4946",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container": "#eeeeec",
+                        "tertiary-container": "#6a6b6b",
+                        "outline-variant": "#bdc9c5",
+                        "surface-bright": "#f9f9f7",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e2e3e0",
+                        "primary-fixed": "#98f3df",
+                        "on-secondary-container": "#616569",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1b",
+                        "primary-container": "#097969",
+                        "surface-container-low": "#f4f4f1",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e2e3e0",
+                        "tertiary": "#515353",
+                        "on-primary-fixed": "#00201b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-primary-container": "#a3feea",
+                        "surface-tint": "#006b5c",
+                        "on-tertiary-container": "#eceded",
+                        "outline": "#6e7a76",
+                        "primary-fixed-dim": "#7cd7c3",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1ef",
+                        "on-error-container": "#93000a",
+                        "primary": "#005e51",
+                        "on-secondary-fixed": "#181c20",
+                        "secondary-fixed-dim": "#c4c6cc",
+                        "on-secondary-fixed-variant": "#44474b",
+                        "surface": "#f9f9f7",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-high": "#e8e8e6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap": "5rem",
+                        "margin-mobile": "1rem",
+                        "gutter": "1.5rem",
+                        "margin-desktop": "2.5rem",
+                        "component-padding": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "caption": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .perspective-lg {
+            perspective: 2000px;
+        }
+        .certificate-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px -15px rgba(0, 94, 81, 0.15);
+        }
+        .glass-overlay {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        @keyframes pulse-emerald {
+            0% { box-shadow: 0 0 0 0 rgba(9, 121, 105, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(9, 121, 105, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(9, 121, 105, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-primary selection:text-white">
+<div data-include="../components/utility-bar.html"></div>
+<div data-include="../components/navbar.html"></div>
+<!-- Content Spacer for Fixed Header -->
+<div class="h-32 w-full"></div>
+<!-- Small Hero Banner -->
+<header class="relative pt-24 pb-16 overflow-hidden bg-surface-container-low border-b border-outline-variant">
+<div class="absolute inset-0 opacity-5 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="80" id="grid" patternunits="userSpaceOnUse" width="80">
+<path d="M 80 0 L 0 0 0 80" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 text-center md:text-left">
+<nav class="flex mb-6 font-label-md gap-2 text-on-surface-variant justify-center md:justify-start">
+<a class="hover:text-primary transition-colors" href="../Home/code.html">Home</a>
+<span>/</span>
+<span class="text-primary font-bold">Certificates &amp; Compliance</span>
+</nav>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 max-w-2xl">
+            Trusted Global Trade <span class="text-outline">&amp; Compliance</span>
+</h1>
+<p class="font-body-lg text-on-surface-variant max-w-xl">
+            Every certificate we hold represents a promise we take seriously. From MSME registration to FSSAI approval, each credential reflects our commitment to doing things the right way — not because regulations demand it, but because our partners rely on us.
+        </p>
+</div>
+</header>
+<!-- Certificate Grid Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- MSME Card -->
+<div class="certificate-card group relative bg-white border border-outline-variant rounded p-2 transition-all duration-500 cursor-pointer" onclick="openLightbox('MSME Certificate', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDd5BsJG7gJA_-_Kz2r22CE_RW94KJYgR2lwqEZj-K6XJFznSr7xbrHQTdnJ-j5TeXZwDGdB6at5NhkmDF-SZjS-dAgbY8YTVT36T4_LC5M2Cq6m0krWnZjMMA4dye1Dnv5sctxAAqPq4vO_urWk3z6mL_o1ZvnOH9hW4EUtrPW6DBwwNP07j8e9ELYFVzuWoHCsGGBxDGv6OADRFhDjSDUc9iNnc8vOO6vn58IMkTfCWrZMVXNaouYfw')">
+<div class="relative aspect-[3/4] bg-surface-container-highest overflow-hidden mb-4">
+<img alt="MSME Certificate" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd5BsJG7gJA_-_Kz2r22CE_RW94KJYgR2lwqEZj-K6XJFznSr7xbrHQTdnJ-j5TeXZwDGdB6at5NhkmDF-SZjS-dAgbY8YTVT36T4_LC5M2Cq6m0krWnZjMMA4dye1Dnv5sctxAAqPq4vO_urWk3z6mL_o1ZvnOH9hW4EUtrPW6DBwwNP07j8e9ELYFVzuWoHCsGGBxDGv6OADRFhDjSDUc9iNnc8vOO6vn58IMkTfCWrZMVXNaouYfw"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+<div class="bg-white p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-primary" data-weight="fill">zoom_in</span>
+</div>
+</div>
+</div>
+<div class="px-3 pb-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-primary">MSME</h3>
+<span class="text-caption bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded">Govt. of India</span>
+</div>
+<p class="text-label-md text-on-surface-variant">Micro, Small and Medium Enterprises Registration</p>
+</div>
+</div>
+<!-- GST Card -->
+<div class="certificate-card group relative bg-white border border-outline-variant rounded p-2 transition-all duration-500 cursor-pointer" onclick="openLightbox('GST Registration', 'https://lh3.googleusercontent.com/aida-public/AB6AXuCEmElcgavvvLuh8ap8_vxQCcuglXh0EXzx33Nmzqz1iLoI9WfZYC_J6viVHJDvYRRdFs7PCA_Kt4pdocYdCJc79lYDkMBdPq6Up9ykKkUIKn7LCA2CbGpifSSIilqEYZ3VK7aEwEP4Eb7-GsK5FLyaxO6f-ZBiQzZeclY9wklIDAHaW8Yjfy4s--GeaO16A9US5Uz7qzsMu8hcEwPxXAPuN5ZQ9MoqUO9hhImiLZySUzSMWBt2nQHL4A')">
+<div class="relative aspect-[3/4] bg-surface-container-highest overflow-hidden mb-4">
+<img alt="GST Registration" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEmElcgavvvLuh8ap8_vxQCcuglXh0EXzx33Nmzqz1iLoI9WfZYC_J6viVHJDvYRRdFs7PCA_Kt4pdocYdCJc79lYDkMBdPq6Up9ykKkUIKn7LCA2CbGpifSSIilqEYZ3VK7aEwEP4Eb7-GsK5FLyaxO6f-ZBiQzZeclY9wklIDAHaW8Yjfy4s--GeaO16A9US5Uz7qzsMu8hcEwPxXAPuN5ZQ9MoqUO9hhImiLZySUzSMWBt2nQHL4A"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+<div class="bg-white p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-primary" data-weight="fill">zoom_in</span>
+</div>
+</div>
+</div>
+<div class="px-3 pb-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-primary">GST</h3>
+<span class="text-caption bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded">Financial Compliance</span>
+</div>
+<p class="text-label-md text-on-surface-variant">Goods and Services Tax Identification Number (GSTIN)</p>
+</div>
+</div>
+<!-- APEDA Card -->
+<div class="certificate-card group relative bg-white border border-outline-variant rounded p-2 transition-all duration-500 cursor-pointer" onclick="openLightbox('APEDA License', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDvNbIHxdoIM5qdBU6ZZVIEgDLrU23aDv3WwnWvyZQ3sL6369O9ml5CU1SADJ9_-4wVMHKMU_QXpMw1LudOzmstgtBU9T9iq8TEeFDox3yCRLRT0AlXH8kbB6KsxBAD99bluw1mXbIlreAaGF62awkJAfut6yRPQp8gK1Mo4Rr7cSCoOZ2cWcjKlz1tjRdwF_2IADJewyKyX_mrxkNpeXpKvpYDT3uMmlqgkCkMkrsNmt2b4Hkzf_stXg')">
+<div class="relative aspect-[3/4] bg-surface-container-highest overflow-hidden mb-4">
+<img alt="APEDA License" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvNbIHxdoIM5qdBU6ZZVIEgDLrU23aDv3WwnWvyZQ3sL6369O9ml5CU1SADJ9_-4wVMHKMU_QXpMw1LudOzmstgtBU9T9iq8TEeFDox3yCRLRT0AlXH8kbB6KsxBAD99bluw1mXbIlreAaGF62awkJAfut6yRPQp8gK1Mo4Rr7cSCoOZ2cWcjKlz1tjRdwF_2IADJewyKyX_mrxkNpeXpKvpYDT3uMmlqgkCkMkrsNmt2b4Hkzf_stXg"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+<div class="bg-white p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-primary" data-weight="fill">zoom_in</span>
+</div>
+</div>
+</div>
+<div class="px-3 pb-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-primary">APEDA</h3>
+<span class="text-caption bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded">Export Authority</span>
+</div>
+<p class="text-label-md text-on-surface-variant">Export License for Agricultural &amp; Processed Products</p>
+</div>
+</div>
+<!-- FSSAI Card -->
+<div class="certificate-card group relative bg-white border border-outline-variant rounded p-2 transition-all duration-500 cursor-pointer" onclick="openLightbox('FSSAI License', 'https://lh3.googleusercontent.com/aida-public/AB6AXuCCEYJuU8KAKnbVqK43QIuyidpI1-3kdcj863xmTYUp5PpnWf7hovvyuHTg--N8hfIRtvPpGRxzMVVz5TSfThtIw3R4y4Z51h2LytTnfFTJ5XE16sWjBlLt5HGIuhMRkRAKZh3Nt3yB49El_QXApZXreIAt0Ln6VlaLe2v9ydt8vrveYot4nmtBD61dWU07ggpj-7Ga8QD96iEPuA4j2x4yMRqM56uodbrpxIjLkHeQYLyW883q39EBuQ')">
+<div class="relative aspect-[3/4] bg-surface-container-highest overflow-hidden mb-4">
+<img alt="FSSAI License" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCEYJuU8KAKnbVqK43QIuyidpI1-3kdcj863xmTYUp5PpnWf7hovvyuHTg--N8hfIRtvPpGRxzMVVz5TSfThtIw3R4y4Z51h2LytTnfFTJ5XE16sWjBlLt5HGIuhMRkRAKZh3Nt3yB49El_QXApZXreIAt0Ln6VlaLe2v9ydt8vrveYot4nmtBD61dWU07ggpj-7Ga8QD96iEPuA4j2x4yMRqM56uodbrpxIjLkHeQYLyW883q39EBuQ"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+<div class="bg-white p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-primary" data-weight="fill">zoom_in</span>
+</div>
+</div>
+</div>
+<div class="px-3 pb-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-primary">FSSAI</h3>
+<span class="text-caption bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded">Food Safety</span>
+</div>
+<p class="text-label-md text-on-surface-variant">Central License for International Food Quality Safety</p>
+</div>
+</div>
+<!-- IEC Card -->
+<div class="certificate-card group relative bg-white border border-outline-variant rounded p-2 transition-all duration-500 cursor-pointer lg:col-span-4 justify-self-center max-w-[calc(25%-18px)] w-full" onclick="openLightbox('IEC Certificate', '')">
+<div class="relative aspect-[3/4] bg-surface-container-highest overflow-hidden mb-4">
+<img alt="IEC Certificate" class="w-full h-full object-cover" src=""/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+<div class="bg-white p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-primary" data-weight="fill">zoom_in</span>
+</div>
+</div>
+</div>
+<div class="px-3 pb-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-primary">IEC</h3>
+<span class="text-caption bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded">DGFT</span>
+</div>
+<p class="text-label-md text-on-surface-variant">Import Export Code issued by DGFT, Government of India</p>
+</div>
+</div>
+</div>
+<!-- Quality Policy Callout -->
+<div class="mt-20 border border-primary/20 bg-primary/[0.02] p-8 md:p-12 rounded relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-[160px]">verified_user</span>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row gap-10 items-center">
+<div class="flex-1">
+<h2 class="font-headline-md text-primary mb-4 uppercase tracking-wider">Our Quality Commitment</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">
+                        At Kushal Globals, quality is personal. Every shipment is handled with the same care we'd expect for our own products. We personally verify that each standard — from documentation to product integrity — is met before anything leaves our hands.
+                    </p>
+</div>
+<a href="../Contact_Page/code.html" class="border-2 border-primary text-primary px-8 py-3 font-bold hover:bg-primary hover:text-white transition-all duration-300 inline-block">
+                    Get in Touch
+                </a>
+</div>
+</div>
+</div>
+</section>
+<div data-include="../components/footer.html"></div>
+<div data-include="../components/whatsapp.html"></div>
+<script src="../components/loader.js"></script>
+<!-- Simple Lightbox Modal -->
+<div class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4" id="lightbox">
+<div class="absolute inset-0 bg-on-background/95 backdrop-blur-xl" onclick="closeLightbox()"></div>
+<div class="relative max-w-4xl w-full max-h-[90vh] bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col scale-90 transition-transform duration-300" id="lightboxContent">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center bg-white">
+<h2 class="font-headline-md text-primary uppercase" id="lightboxTitle">Certificate View</h2>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-highest transition-colors" onclick="closeLightbox()">
+<span class="material-symbols-outlined text-on-surface">close</span>
+</button>
+</div>
+<div class="flex-1 bg-surface-container-lowest overflow-auto p-4 flex items-center justify-center">
+<img alt="Certification" class="max-w-full max-h-full object-contain shadow-md" id="lightboxImg" src=""/>
+</div>
+</div>
+</div>
+<script>
+    function openLightbox(title, imgSrc) {
+        const lightbox = document.getElementById('lightbox');
+        const content = document.getElementById('lightboxContent');
+        const titleEl = document.getElementById('lightboxTitle');
+        const imgEl = document.getElementById('lightboxImg');
+
+        titleEl.innerText = title;
+        imgEl.src = imgSrc;
+        
+        lightbox.classList.remove('hidden');
+        setTimeout(() => {
+            content.classList.remove('scale-90');
+            content.classList.add('scale-100');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        const content = document.getElementById('lightboxContent');
+        
+        content.classList.remove('scale-100');
+        content.classList.add('scale-90');
+        setTimeout(() => {
+            lightbox.classList.add('hidden');
+        }, 300);
+        document.body.style.overflow = '';
+    }
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+</script>
+</body></html>
