@@ -122,6 +122,14 @@
             background-image: radial-gradient(#bdc9c5 0.5px, transparent 0.5px);
             background-size: 24px 24px;
         }
+        .lightbox-img {
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+        }
+        .lightbox-img.zoomed {
+            transform: scale(2.5);
+            cursor: zoom-out;
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md overflow-x-hidden">
@@ -216,6 +224,13 @@
 </button>
 </div>
 </section>
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden items-center justify-center" onclick="closeLightbox(event)">
+<button class="absolute top-6 right-6 text-white/80 hover:text-white z-10" onclick="closeLightbox()">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<img id="lightbox-img" class="lightbox-img max-w-[90vw] max-h-[90vh] object-contain" src="" alt="" onclick="toggleZoom()"/>
+</div>
 <div data-include="../components/footer.html"></div>
 <div data-include="../components/whatsapp.html"></div>
 <script src="../components/loader.js"></script>
@@ -242,6 +257,45 @@
                     }
                 });
             });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        let zoomed = false;
+
+        cards.forEach(card => {
+            card.addEventListener('click', function () {
+                const bg = this.querySelector('[class*="bg-cover"]');
+                if (!bg) return;
+                const url = bg.style.backgroundImage.slice(5, -2);
+                lightboxImg.src = url;
+                lightboxImg.classList.remove('zoomed');
+                zoomed = false;
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        window.closeLightbox = function (e) {
+            if (e && e.target !== e.currentTarget) return;
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = '';
+            lightboxImg.classList.remove('zoomed');
+            zoomed = false;
+        };
+
+        window.toggleZoom = function () {
+            zoomed = !zoomed;
+            lightboxImg.classList.toggle('zoomed', zoomed);
+        };
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                closeLightbox();
+            }
         });
     });
 </script>
