@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery | KUSHAL GLOBALS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c4c6cc",
+                        "surface-container-highest": "#e2e3e0",
+                        "primary-container": "#097969",
+                        "surface-container-low": "#f4f4f1",
+                        "secondary-fixed": "#e0e2e8",
+                        "secondary-container": "#e0e2e8",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f9f9f7",
+                        "on-secondary-container": "#616569",
+                        "inverse-primary": "#7cd7c3",
+                        "error": "#ba1a1a",
+                        "secondary": "#5b5f63",
+                        "inverse-surface": "#2f3130",
+                        "outline-variant": "#bdc9c5",
+                        "primary-fixed-dim": "#7cd7c3",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-fixed-variant": "#44474b",
+                        "on-surface-variant": "#3e4946",
+                        "tertiary-fixed": "#e2e2e2",
+                        "tertiary": "#515353",
+                        "outline": "#6e7a76",
+                        "surface-tint": "#006b5c",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadad8",
+                        "background": "#f9f9f7",
+                        "tertiary-container": "#6a6b6b",
+                        "surface-variant": "#e2e3e0",
+                        "surface": "#f9f9f7",
+                        "on-secondary-fixed": "#181c20",
+                        "primary": "#005e51",
+                        "surface-container": "#eeeeec",
+                        "on-primary-fixed": "#00201b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed-variant": "#005045",
+                        "on-primary-container": "#a3feea",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1a1c1b",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#1a1c1b",
+                        "inverse-on-surface": "#f1f1ef",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#98f3df",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#eceded",
+                        "surface-container-high": "#e8e8e6",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap": "5rem",
+                        "margin-mobile": "1rem",
+                        "gutter": "1.5rem",
+                        "component-padding": "1rem",
+                        "margin-desktop": "2.5rem"
+                    },
+                    "fontFamily": {
+                        "caption": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .whatsapp-pulse {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(9, 121, 105, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(9, 121, 105, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(9, 121, 105, 0); }
+        }
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .geometric-bg {
+            background-image: radial-gradient(#bdc9c5 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<div data-include="../components/utility-bar.html"></div>
+<div data-include="../components/navbar.html"></div>
+<!-- Small Hero Banner -->
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-surface-container overflow-hidden">
+<div class="absolute inset-0 geometric-bg opacity-30"></div>
+<div class="px-margin-desktop max-w-container-max mx-auto relative z-10">
+<div class="max-w-2xl">
+<span class="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full font-label-md mb-6 uppercase tracking-widest">Farm-to-Port Visual Journey</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-6">Our Operations in <span class="text-primary">High-Definition</span></h2>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">Witness the precision and quality control of our end-to-end supply chain. Every stage of the journey is personally overseen to ensure the highest global standards for our partners.</p>
+</div>
+</div>
+<div class="absolute right-0 bottom-0 w-1/3 h-full hidden lg:block">
+<div class="w-full h-full bg-primary/5 clip-path-polygon-[100%_0,100%_100%,0_100%]"></div>
+</div>
+</section>
+<!-- Photo Grid (Bento Style) -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Visual Catalog</h3>
+<p class="text-on-surface-variant italic">Direct oversight of every link in the global supply chain.</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="filter-btn bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md shadow-sm">All Stages</button>
+<button class="filter-btn bg-white border border-outline-variant text-on-surface-variant px-6 py-2 rounded-lg font-label-md hover:border-primary transition-colors">On-Farm</button>
+<button class="filter-btn bg-white border border-outline-variant text-on-surface-variant px-6 py-2 rounded-lg font-label-md hover:border-primary transition-colors">Refinement</button>
+<button class="filter-btn bg-white border border-outline-variant text-on-surface-variant px-6 py-2 rounded-lg font-label-md hover:border-primary transition-colors">Port Logistics</button>
+</div>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[250px]">
+<!-- Harvesting Large -->
+<div class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDL9fBTcHgqKCDEzK1iF8ko_EmAwcgvuBUK7HiLUrqdAVNJgIhY0yZZklE9ymshzZ66SEmvvGwcDlQi9F4NaEJtxRHwK7o31jZC0ks9LLCp5RXI5AwALIm3nnEWRGUVQBVEmf6kZHjdIvUF2n2bl4HCXEQ4rW-xZj8HBT9A_Ib95FLQVIBqGUbt4onNqLeiEGKRszVEtNX76bgUS68pfY31qqddyLd2ItTFC859UzLa5e5CQ_FnetbJKg')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="text-white/80 font-label-md uppercase tracking-wider mb-2 block">Stage 01: Farm Extraction</span>
+<h4 class="text-white font-headline-sm">Personal Precision Harvesting</h4>
+</div>
+<div class="gallery-overlay absolute inset-0 bg-primary/20 backdrop-blur-[2px] opacity-0 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<!-- Packaging Facility -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmd5eBzgFooJpsDeWbXpB9wSFn7MaqRQWAwITcVLqdzpD7VVAc7otFdcBFZH4YMME9FnU7-MfKwNA1Sl-Kv-Hof6Bc0P90MNtuP89ZK7eR_Eo-DeQgi4D3vzMn2nXgb8K9gCeBqOhm9DG4BwV6FWbA286faYoHjc0hrtS9YikaXybpNgGwCMVpXfZT9MRSv8IpK3Rt07vgFwBMjRV2rTB1yglrUGDw9Xv0YGqHFAO_w3znrpvwFzny2g')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h4 class="text-white font-label-md">Stage 02: Controlled Refinement</h4>
+</div>
+</div>
+<!-- Quality Check -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApN44Zry1mFXMMUfCKfSLpnphaT98deQRx-NguxeM7es34J4c5y0FHytEorEyBLTNlY4JmJSaVbP_4TJ4-EhLo3awHiCKEbgRN2_KFvt-f8YKjaSoM0A0dYoLCNXkdbQMHWDcNcChbuF-1NHIKs9FD2zB5HZTRQIvm4TZOPk4v5ByKB49dygh39vr8_JYrswubxHTFoEjnB7LPM1mUUzY8LfEmSrmj1eW4T4llVZcBkn8NphCXCiWscg')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h4 class="text-white font-label-md">Quality Assurance Protocol</h4>
+</div>
+</div>
+<!-- Logistics Center -->
+<div class="md:col-span-4 md:row-span-2 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFU1KERt7yRGBGsVNrpbbVBxeW336aJRTjO13qIX7WPem7UuaMFbGqqmF2lOIFyEhGeFBEnxPB1PRPaJG_L_Y_uKG5aWbHJrEpoPCXNdgRerUkxEybkQTjsW6gtLDl_V05VfzyqlogzAw3fUgt67RpFAv6K6KWm-mp7ZvdUj42spsfRKLUoD-ekkURSx6qELPsyKOnRqToHkMcjBBXdDEzpC1kIc7XZawJ7WKHhQyMd7mXEbDVt-a7zQ')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="text-white/80 font-label-md uppercase tracking-wider mb-2 block">Stage 03: Global Export</span>
+<h4 class="text-white font-headline-sm">Port-Ready Logistics</h4>
+</div>
+</div>
+<!-- Warehousing -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDQBtUcSzELH0AqOYd3uvSz8FlD3kyxtdiGaelLqg_UlFxfCEVevfRyc1AeI9aOPcP0tCpFHy1b9B5jCL8bxmOU4lVNlD4JW8zNEPfKCZiCFq8jUobSn-JJX54JnXGJOR5JgZ_tLfOy3zPP_MkH3OWus99rAxUNLn_8FXnkUwmaLNl6x4Fu5gDhQiFJwpvtKOI62hDslQeCo1fu6DK3LmIdrLsfbwKa4pgHalO2yIiSqJNPFghNRGLhA')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h4 class="text-white font-label-md">Strategic Storage &amp; Fulfillment Monitoring</h4>
+</div>
+</div>
+</div>
+<!-- Load More Section -->
+<div class="mt-16 text-center">
+<button class="group inline-flex items-center gap-2 border-b-2 border-primary pb-1 font-bold text-primary hover:opacity-80 transition-opacity">
+                LOAD MORE VISUAL ASSETS
+                <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">expand_more</span>
+</button>
+</div>
+</section>
+<div data-include="../components/footer.html"></div>
+<div data-include="../components/whatsapp.html"></div>
+<script src="../components/loader.js"></script>
+<script>
+    document.addEventListener('partialsLoaded', function () {
+        // Simple filtering logic
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+                    b.classList.add('bg-white', 'text-on-surface-variant', 'border-outline-variant');
+                });
+                this.classList.remove('bg-white', 'text-on-surface-variant', 'border-outline-variant');
+                this.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+            });
+        });
+    });
+</script>
+</body></html>
