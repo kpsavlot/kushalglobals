@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Details | KUSHAL GLOBALS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dadad8",
+                        "on-background": "#1a1c1b",
+                        "inverse-primary": "#7cd7c3",
+                        "secondary-fixed": "#e0e2e8",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2f3130",
+                        "secondary": "#5b5f63",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e0e2e8",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#005045",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "background": "#f9f9f7",
+                        "on-surface-variant": "#3e4946",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container": "#eeeeec",
+                        "tertiary-container": "#6a6b6b",
+                        "outline-variant": "#bdc9c5",
+                        "surface-bright": "#f9f9f7",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e2e3e0",
+                        "primary-fixed": "#98f3df",
+                        "on-secondary-container": "#616569",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1b",
+                        "primary-container": "#097969",
+                        "surface-container-low": "#f4f4f1",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e2e3e0",
+                        "tertiary": "#515353",
+                        "on-primary-fixed": "#00201b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-primary-container": "#a3feea",
+                        "surface-tint": "#006b5c",
+                        "on-tertiary-container": "#eceded",
+                        "outline": "#6e7a76",
+                        "primary-fixed-dim": "#7cd7c3",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1ef",
+                        "on-error-container": "#93000a",
+                        "primary": "#005e51",
+                        "on-secondary-fixed": "#181c20",
+                        "secondary-fixed-dim": "#c4c6cc",
+                        "on-secondary-fixed-variant": "#44474b",
+                        "surface": "#f9f9f7",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-high": "#e8e8e6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap": "5rem",
+                        "margin-mobile": "1rem",
+                        "gutter": "1.5rem",
+                        "margin-desktop": "2.5rem",
+                        "component-padding": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "caption": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .whatsapp-pulse {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(9, 121, 105, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(9, 121, 105, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(9, 121, 105, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<div data-include="../components/utility-bar.html"></div>
+<div data-include="../components/navbar.html"></div>
+<!-- Mini Hero Banner -->
+<section class="mt-8 relative h-[307px] min-h-[240px] flex items-center overflow-hidden mx-margin-desktop rounded-3xl">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCA8n1bLhqap8DLPI9ldo2_Cy0AXdG_6xkpQXvpiqcTrk-LJLAjV8_UTVqp04knXEfv-DPG9zXcQnKYGAXvVqm7-z2H9AEURIzUbLgbjT-oZVnzlxKhXE5irvjI-0qfsGf27PPPu6XeCjZ0MOcNvDuOV9NPKq0Ubfm41L9FodFhXNQUgKRaOPSFwvE4PLCBoiKhfrEZFQKsW91LkcNAllFwa2huKxNMA-c3kmWAadArOh5F-ppOkFXEsg')"></div>
+<div class="absolute inset-0 bg-primary/20 backdrop-overlay transition-opacity"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full text-white">
+<nav class="flex items-center gap-2 text-caption font-label-md mb-4 uppercase tracking-widest opacity-80">
+<span>Products</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Spices</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-white font-bold">Premium Turmeric Fingers</span>
+</nav>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-2">Premium Turmeric Fingers</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl">High-curcumin content sourced from the major turmeric belts of Erode and Nizamabad.</p>
+</div>
+</section>
+<!-- Product Detail Split Layout -->
+<main class="max-w-container-max mx-auto px-margin-desktop py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left: Gallery Carousel -->
+<div class="lg:col-span-7 space-y-6">
+<div class="relative aspect-[4/3] bg-surface-container-low rounded-3xl overflow-hidden border border-outline-variant group shadow-sm">
+<img alt="Premium Turmeric Fingers Close-up" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtYMYU-Jh3SGpTH4XGvC1OIhFiQvYVJM9MT24HP976kJm4HSQImS3-iKKlFZ84wNVrJ0rMcgulk9zBzd79eboIY6GXl9Ft6pfjEJoRPNj2bhvZCja4EjutfwDKvTI4xQyk7vJCj04_KLgEsg7z3r-fJTetybyJU0_QoZ6_CkU2DzYlvmKVK-XXPcSKY6FSqIJQUxZqemB66O8_sslcTE9wI9cRnnN_HJRpmMhC0hhEgKmKlXkI5z7-7w"/>
+<div class="absolute inset-x-0 bottom-0 p-8 flex justify-between items-center bg-gradient-to-t from-black/50 to-transparent">
+<div class="flex gap-3">
+<span class="w-10 h-1.5 bg-primary rounded-full transition-all duration-300"></span>
+<span class="w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer"></span>
+<span class="w-4 h-1.5 bg-white/50 rounded-full hover:bg-white transition-all cursor-pointer"></span>
+</div>
+<div class="flex gap-2">
+<button class="bg-white/95 p-3 rounded-full hover:bg-white transition-all shadow-lg active:scale-90">
+<span class="material-symbols-outlined text-primary font-bold">chevron_left</span>
+</button>
+<button class="bg-white/95 p-3 rounded-full hover:bg-white transition-all shadow-lg active:scale-90">
+<span class="material-symbols-outlined text-primary font-bold">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square rounded-xl border-2 border-primary overflow-hidden cursor-pointer shadow-sm">
+<img alt="Turmeric Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2vBS7SE_yvtCIdm5IHFwPe2729dHpDwbumpa30mJIsfVNVFi6hwwiyWQrvEY3hL0OVHaj3siERAGfUDu-n-6OSfQkDOGzXVim1t2VgHoz-_SIC9ftlmvbfdRuRq_Bw9YHsYBTE2hvGlog7LSbnZjeV67xqVL5gFgrfcO5E-Vy_MRcdRIhreXfoZ9RV134E_TH5dv76vrSL7LVIikES78lyslCiWEbWC2wLhnyhLigZ2vKs729wgpdgw"/>
+</div>
+<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100">
+<img alt="Sorting Process" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBncnMEoCGQxtNImYMwvRj9cetYi89Z2fX40wFhVODcKiIKnBOxpr62ZfeP62Js_5khEjPWQJbEl8utjO90eCtIBDQIK5GUAKEHYMOKDf2T7L_ejiMEC6UQg3Vl8NGUlIYzChrBxvEYp8_gkOKGxFZn7ClGDulzjs7jBrbHuolqZn2-HZWEzNTFDyhIFGOYEWt5uJpOkL3XMvoN3VI9vx2Sxt7NjJmw77bDSu-YqsSsS4GxCLBz0hzzyA"/>
+</div>
+<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100">
+<img alt="Warehouse Packaging" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcof0ceJGblBUsKCJnzLLulZ3l5RaDtorXPdwABXJkP5zNX2UbKdjUcc3jt8f4jSUj7SBbASI3Au1PmzmrnuIvnBd2pLsjHQMyU_W_w_tSua3OFbo1vkySJjWDOuPZ3Nx90bHqrDSUdK7GelGtq3OrCLtCffjsC-OKSOaSnI8YKO1FZ-4zaq0HS0mHaxRi-ub2QYnnSnRYMX050f3xEw0B0PVtkJpD_JWDgxmntrd-T2X_iYduNhJu8g"/>
+</div>
+<div class="aspect-square rounded-xl border border-outline-variant overflow-hidden cursor-pointer hover:border-primary transition-all opacity-70 hover:opacity-100">
+<img alt="Specification Sheet" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBpDPm5j2NBLOERiy4AoscKgYljaCF8UFNEVGGtKcwtDpnp1kIlQTCv-CK_nqsU9BOo6HJBFQxVysxQzsPl74g2msD4GxVwLyUKxTOzXnxUdYeCKRVw9h743rgPmyqr-jiEQrSAaqVVL0hO0Tlzw0tN1gGhvO_AF6PNJJArxa8zfwbZEC6Yy7ik7xDxBtwTFSB-gdr8j0vGoRYbke1RxyAizPFNmkZ8jqVCgw7iq3m9aMpOIRaEITWxg"/>
+</div>
+</div>
+</div>
+<!-- Right: Details & Inquiry -->
+<div class="lg:col-span-5 space-y-8">
+<div class="border-b border-outline-variant pb-6">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-primary/10 text-primary px-3 py-1 text-label-md font-bold rounded uppercase tracking-wider">Premium Export Quality</span>
+<span class="text-on-surface-variant text-label-md">SKU: KG-SPC-TM01</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">Product Specifications</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Our Premium Turmeric Fingers are sourced directly from established local markets. We offer double-polished fingers known for their consistent internal color and adherence to international standard trade parameters. I personally oversee the procurement to ensure you get exactly what is promised.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface-variant uppercase">Origin</p>
+<p class="font-body-md font-semibold">India (Erode/Nizamabad)</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">grid_view</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface-variant uppercase">Variety</p>
+<p class="font-body-md font-semibold">Double Polished Fingers</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">inventory_2</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface-variant uppercase">Standard Packing</p>
+<p class="font-body-md font-semibold">25kg / 50kg Jute/PP Bags</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface-variant uppercase">Logistics</p>
+<p class="font-body-md font-semibold">FOB/CIF Global Ports</p>
+</div>
+</div>
+</div>
+<!-- Inquiry Form -->
+<div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant shadow-sm">
+<h3 class="font-headline-sm text-headline-sm mb-2 text-primary">Request a Quote</h3>
+<p class="text-body-md text-on-surface-variant mb-6">I handle every inquiry personally. Share your requirements below and I'll get back to you with the best available market rates.</p>
+<form class="space-y-4">
+<div class="group">
+<label class="block text-label-md font-bold text-on-surface-variant mb-1 group-focus-within:text-primary transition-colors uppercase">Company Name</label>
+<input class="w-full bg-white border-outline-variant focus:border-primary focus:ring-0 rounded-xl p-4 text-body-md transition-all shadow-sm" placeholder="Global Logistics Ltd" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="group">
+<label class="block text-label-md font-bold text-on-surface-variant mb-1 group-focus-within:text-primary transition-colors uppercase">Quantity (MT)</label>
+<input class="w-full bg-white border-outline-variant focus:border-primary focus:ring-0 rounded-xl p-4 text-body-md transition-all shadow-sm" placeholder="e.g. 50" type="number"/>
+</div>
+<div class="group">
+<label class="block text-label-md font-bold text-on-surface-variant mb-1 group-focus-within:text-primary transition-colors uppercase">Target Port</label>
+<input class="w-full bg-white border-outline-variant focus:border-primary focus:ring-0 rounded-xl p-4 text-body-md transition-all shadow-sm" placeholder="Rotterdam" type="text"/>
+</div>
+</div>
+<div class="group">
+<label class="block text-label-md font-bold text-on-surface-variant mb-1 group-focus-within:text-primary transition-colors uppercase">Your Email</label>
+<input class="w-full bg-white border-outline-variant focus:border-primary focus:ring-0 rounded-xl p-4 text-body-md transition-all shadow-sm" placeholder="direct@yourcompany.com" type="email"/>
+</div>
+<button class="w-full bg-primary text-white font-bold py-5 rounded-xl hover:opacity-95 shadow-lg hover:shadow-primary/30 transition-all active:scale-[0.98] uppercase tracking-widest text-label-md mt-2" type="submit">
+                        Send Me Your Inquiry
+                    </button>
+</form>
+</div>
+</div>
+</div>
+</main>
+<div data-include="../components/footer.html"></div>
+<div data-include="../components/whatsapp.html"></div>
+<script src="../components/loader.js"></script>
+<script>
+    document.addEventListener('partialsLoaded', function () {
+        const thumbnails = document.querySelectorAll('.grid-cols-4 > div');
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                thumbnails.forEach(t => {
+                    t.classList.remove('border-primary', 'border-2');
+                    t.classList.add('border-outline-variant', 'border');
+                });
+                thumb.classList.add('border-primary', 'border-2');
+                thumb.classList.remove('border-outline-variant', 'border');
+            });
+        });
+    });
+</script>
+</body></html>
