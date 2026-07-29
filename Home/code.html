@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kushal Globals | Precision Agricultural Logistics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dadad8",
+                        "on-background": "#1a1c1b",
+                        "inverse-primary": "#7cd7c3",
+                        "secondary-fixed": "#e0e2e8",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2f3130",
+                        "secondary": "#5b5f63",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e0e2e8",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#005045",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "background": "#f9f9f7",
+                        "on-surface-variant": "#3e4946",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container": "#eeeeec",
+                        "tertiary-container": "#6a6b6b",
+                        "outline-variant": "#bdc9c5",
+                        "surface-bright": "#f9f9f7",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e2e3e0",
+                        "primary-fixed": "#98f3df",
+                        "on-secondary-container": "#616569",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1b",
+                        "primary-container": "#097969",
+                        "surface-container-low": "#f4f4f1",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e2e3e0",
+                        "tertiary": "#515353",
+                        "on-primary-fixed": "#00201b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-primary-container": "#a3feea",
+                        "surface-tint": "#097969",
+                        "on-tertiary-container": "#eceded",
+                        "outline": "#6e7a76",
+                        "primary-fixed-dim": "#7cd7c3",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1ef",
+                        "on-error-container": "#93000a",
+                        "primary": "#097969",
+                        "on-secondary-fixed": "#181c20",
+                        "secondary-fixed-dim": "#c4c6cc",
+                        "on-secondary-fixed-variant": "#44474b",
+                        "surface": "#f9f9f7",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-high": "#e8e8e6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap": "5rem",
+                        "margin-mobile": "1rem",
+                        "gutter": "1.5rem",
+                        "margin-desktop": "2.5rem",
+                        "component-padding": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "caption": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-slide {
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+            position: absolute;
+            inset: 0;
+        }
+        .hero-slide.active {
+            opacity: 1;
+        }
+        .metallic-gradient {
+            background: linear-gradient(135deg, #e2e4e3 0%, #ffffff 50%, #e2e4e3 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .whatsapp-pulse {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(9, 121, 105, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(9, 121, 105, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(9, 121, 105, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<div data-include="../components/utility-bar.html"></div>
+<!-- TopAppBar: Floating Style -->
+<div data-include="../components/navbar.html"></div>
+<!-- Auto-Sliding Hero -->
+<header class="relative w-full h-[921px] overflow-hidden">
+<div class="relative w-full h-full" id="hero-slider">
+<!-- Slide 1 -->
+<div class="hero-slide active">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIi5xaDtMXo9jNk0FFjwYC4U1G2dpsAr-_JE7Ifyb0jYH7rpIJ0KbCoT9g6jchA4bZrkDlXIDc_lROeArtXDsdtAJWjZlkLWbxeKzxCON_BmF1ubfcEPar3zuj55yYHzZ6tYpnK916JuaOKRnGj1DcxOLb9A0rERdeEgBujLmbUGakuN4gIEPojwYt3qk4iHYIo7Ldyzu99fkvWJygM2y2MpEan4fLWj6d5qnTn9LEBkkNbnHio9kylg')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent"></div>
+</div>
+<!-- Slide 2 -->
+<div class="hero-slide">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbZ8D3LWhloumt2xtb8uJj3yYe6Q2q9MzN3ZuJ13HgAgibQPKEXIfrXQ4tekNK21HkaizszHw_WXW92XfnEnYI1XQpiqqnHJGtVI8kUpD6GKwMBYBR8iLOt55ibBuR85_62RwatqdyE_ujaEsbvxuFnBWwYdtxUA10GayOkFQhJgvNnSMuezdxA7IcPgHGM6YjUxVAHxKlBjbAPbLjJmzBAAYPwm_Dwafx4hxbDz7GNuwB5OoJ_b_QZQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent"></div>
+</div>
+<!-- Slide 3 -->
+<div class="hero-slide">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBv0R4kUOfJ2C4b5RbFgpLMOH6nS78D4BAdtUBB3sGVQsp3kkdKqn39b-8yP_kQVakGUkI5IpY002JYPJeSnYH_R7kRyeOfVqX-nqya79Aag-DprqZnqIo7RpsDsroxUeWcfZ1-7M_jEd7zEtA6G4A9FaLsinLoctX5LBnuunyac78dJlsTkfqHgGPOKkkGcMiooGhcc2ceoCgeXOv9AiCMslzkZT2LnYE0T3ZjnWiFVOKDy12Dhyw6XA')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent"></div>
+</div>
+</div>
+<div class="relative z-10 h-full flex items-center px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-2xl text-white space-y-6">
+<div class="inline-block px-3 py-1 bg-primary text-[12px] font-label-md tracking-widest uppercase mb-2">Institutional Partner</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-[1.1]">Simplifying Global Procurement.</h1>
+<p class="font-body-lg text-surface-container-lowest/90 max-w-xl">A dedicated trade partner focused on smooth operations, long-term value, and serving your specific procurement needs with absolute reliability.</p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-white text-primary px-8 py-4 font-bold font-label-md rounded-[4px] hover:bg-surface-container transition-all">Get a Quote</button>
+<button class="border border-white/40 backdrop-blur-sm text-white px-8 py-4 font-bold font-label-md rounded-[4px] hover:bg-white/10 transition-all flex items-center gap-2">
+                        View Catalog <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Slider Controls -->
+<div class="absolute bottom-10 right-margin-desktop z-20 flex gap-4">
+<button class="w-12 h-12 flex items-center justify-center border border-white/20 hover:bg-white/10 text-white transition-all" onclick="prevSlide()">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center border border-white/20 hover:bg-white/10 text-white transition-all" onclick="nextSlide()">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</header>
+<!-- About Us Snapshot -->
+<section class="py-section-gap" id="about">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative group">
+<div class="absolute -top-6 -left-6 w-32 h-32 bg-primary/10 -z-10"></div>
+<div class="border border-outline-variant p-4 bg-white shadow-sm">
+<img class="w-full aspect-[4/3] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCag2IFETgrKUu6dMC95xtN_lWsWD5DXiyqv-kmYXNQlgk4yt2g8nK3yJHMIH8o37fQae9L0lNh5QYPx9LW8gCnz6kWxxrjknz-mFIQIiHaQAUZEN8EuqKlbui8P9R7wKgB8zwRNKwo1gWcLI9lggH75WX06AHfbDG7GR_q_j8ZFF4NjxVFPMlyvlmq-nG2WsUfFhFRWSiA8bc0gLhETbmGPeNQE4zvuily-LvvasM-aB5vW0AXh_sDig"/>
+</div>
+<div class="absolute -bottom-10 -right-10 hidden md:block w-48 h-48 border-[1px] border-outline-variant bg-surface-container-lowest p-6 shadow-xl text-center flex flex-col justify-center">
+<div class="text-primary font-display-lg text-headline-md leading-tight mb-2">Trade Partner</div>
+<div class="text-on-surface-variant font-label-md uppercase tracking-wider text-[12px]">Delivering Certainty</div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="text-primary font-label-md tracking-widest uppercase block">Our Spirit</span>
+<h2 class="font-headline-md text-on-background">Your Strategic Advantage in Agricultural Trade.</h2>
+<div class="w-20 h-1 bg-primary"></div>
+</div>
+<p class="font-body-md text-on-surface-variant">Kushal Globals is built on a foundation of operational excellence and client-centricity. We specialize in simplifying the complexities of international trade, ensuring that every shipment meets your exact specifications and arrives on schedule.</p>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-body-md font-medium">Standardized Quality Control</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-body-md font-medium">Verified Supply Networks</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-body-md font-medium">Transparent Documentation</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-body-md font-medium">Professional Trade Support</span>
+</li>
+</ul>
+<button class="secondary-button group flex items-center gap-2 border border-primary text-primary px-8 py-3 font-bold font-label-md rounded-[4px] hover:bg-primary hover:text-white transition-all">
+                        Our Approach <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-section-gap bg-surface-container-low border-y border-outline-variant" id="products">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16 space-y-4">
+<span class="text-primary font-label-md tracking-widest uppercase">Portfolio</span>
+<h2 class="font-headline-md text-on-background">Featured Commodities</h2>
+<p class="max-w-2xl mx-auto text-on-surface-variant">Core products managed with professional oversight and operational precision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Potato Card -->
+<a href="#" class="group bg-white border border-outline-variant overflow-hidden hover:shadow-xl transition-all duration-500 block">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3UAyNmuqQ89n04hlymkZTsM9_H1QJ6z9tnldUsY6kz74A2pzE7QxGnRI9aRors6qkhrxMm2cB6Kbrjoj0kJUavD5eHX9xDkdf65n3-mrDsVHpEWT2vu7uJYUWVHZbpwBAseYaAoKq9St41LqpUGdXwwVpvqQGGxbyIExXS6Kp4qLaT2qxA6tBZNSRWdq3QgSD2KQWZwmNQxttVG-SW99qkXfboZB9hPXWWzT7Mqnwsx4R2Z7v4PXD3Q"/>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="font-headline-sm text-[20px] text-on-background">Vegetables</h3>
+<p class="text-on-surface-variant text-[14px]">Fresh, graded vegetables sourced from trusted farms for global export.</p>
+<div class="pt-2">
+<span class="text-primary font-bold text-caption uppercase tracking-wider inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5" style="transform:rotate(0deg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="8 5 19 5 19 16"/></svg> Explore</span>
+</div>
+</div>
+</a>
+<!-- Onion Card -->
+<a href="#" class="group bg-white border border-outline-variant overflow-hidden hover:shadow-xl transition-all duration-500 block">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP9x0uaF4ofcy9Tuz2yDa3HsQ7xm2SFvqAmhD44x28gfCkzmj98cjPd6wHD0XCYjh9-jEl05iFrGG_sEUTvwhsc007x3ot29oZHwq4ZEc9nj4VUJATflr1cp0dl99spiMPTFlVR7sLjKWDYt2jJeN4rgVlvUlxofICorTFnuuayNiz7ruMe5xRue6F2BTV3hYVJyEXU6qu-Pjya5YhQqTW8wqhRWxZQgGw9UraFAQkqWrtdCWsg7nT-w"/>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="font-headline-sm text-[20px] text-on-background">Fruits</h3>
+<p class="text-on-surface-variant text-[14px]">Premium quality fruits, carefully selected and packed for international markets.</p>
+<div class="pt-2">
+<span class="text-primary font-bold text-caption uppercase tracking-wider inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5" style="transform:rotate(0deg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="8 5 19 5 19 16"/></svg> Explore</span>
+</div>
+</div>
+</a>
+<!-- Coming Soon 1 -->
+<a href="#" class="group bg-white border border-outline-variant overflow-hidden hover:shadow-xl transition-all duration-500 block">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIRQrGO1xn0fpgHcCr2LWh94LgOYiiu-iStF0HWJn-KZkAKHLyXsmFnvpICHL5pPdVllIk8NQAQT6DlLRTMJgtReyYRymDStbAfrxzapRWT-cG1XJPtXsr8OHJdlX9ScDc5dMYyc_EEzkuT0gP0SDZ7-CS6N_G8U01S8Y3yzGuWwWw_ri8FHNlh48xp244Mk1VPYwM65Cg1HVRNKq_XCkM_iqJu96F55jXqfJ40FgXhm_39tsxC3gTzg"/>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="font-headline-sm text-[20px] text-on-background">Spices</h3>
+<p class="text-on-surface-variant text-[14px]">Premium spices sourced directly from origin for consistent quality and flavor.</p>
+<div class="pt-2">
+<span class="text-primary font-bold text-caption uppercase tracking-wider inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5" style="transform:rotate(0deg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="8 5 19 5 19 16"/></svg> Explore</span>
+</div>
+</div>
+</a>
+<!-- Coming Soon 2 -->
+<a href="#" class="group bg-white border border-outline-variant overflow-hidden hover:shadow-xl transition-all duration-500 block">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApvGFyQXlkrPUl_61zhVN7Mr7ZgA9um_7H3N6dPfKbuTRPBN3qX6G4yBxiHKGcYpVfwPzMWe3R7EvatxmjINPClydKdjV6RjT4TXSSE3h8hxM8qbXc-vsDsV2raDUZ3xITs3pjAd-8qUkTIetr5TePK8sWJwCO3yc8lQFRTsmGXh7Tcz6hHg8IDiXi6a98f3jMWgmXybKvOLFiaTKVzkxsNxvYcRkSRRNwxrjn8U3gLt9zvUJLgW6Hjwi2nxdOr3q-J_4"/>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="font-headline-sm text-[20px] text-on-background">Grains</h3>
+<p class="text-on-surface-variant text-[14px]">High-grade grains with consistent quality and reliable bulk supply capacity.</p>
+<div class="pt-2">
+<span class="text-primary font-bold text-caption uppercase tracking-wider inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5" style="transform:rotate(0deg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="8 5 19 5 19 16"/></svg> Explore</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-section-gap relative overflow-hidden">
+<!-- Geometric Accent Background -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+<svg height="100%" preserveaspectratio="none" viewbox="0 0 100 100" width="100%">
+<defs>
+<pattern height="10" id="grid" patternunits="userSpaceOnUse" width="10">
+<path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100" width="100"></rect>
+</svg>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-gutter">
+<div class="lg:col-span-1 space-y-6">
+<div class="space-y-4">
+<span class="text-primary font-label-md tracking-widest uppercase block">Our Edge</span>
+<h2 class="font-headline-md text-on-background">Why Trade with Us?</h2>
+</div>
+<p class="text-on-surface-variant">We prioritize institutional reliability and professional trade support over volume, ensuring long-term value for our clients.</p>
+</div>
+<div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Feature Card 1 -->
+<div class="p-8 border border-outline-variant bg-white metallic-depth hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 metallic-gradient flex items-center justify-center border border-outline-variant rounded-[4px] mb-6">
+<span class="material-symbols-outlined text-primary text-[32px]">handshake</span>
+</div>
+<h4 class="font-headline-sm text-on-background mb-4 text-[20px]">Dedicated Support</h4>
+<p class="text-on-surface-variant font-body-md">Personalized oversight for every contract, ensuring clear communication and smooth fulfillment.</p>
+</div>
+<!-- Feature Card 2 -->
+<div class="p-8 border border-outline-variant bg-white metallic-depth hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 metallic-gradient flex items-center justify-center border border-outline-variant rounded-[4px] mb-6">
+<span class="material-symbols-outlined text-primary text-[32px]">inventory</span>
+</div>
+<h4 class="font-headline-sm text-on-background mb-4 text-[20px]">Smooth Operations</h4>
+<p class="text-on-surface-variant font-body-md">Meticulous logistics planning that minimizes disruptions and prioritizes predictable delivery schedules.</p>
+</div>
+<!-- Feature Card 3 -->
+<div class="p-8 border border-outline-variant bg-white metallic-depth hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 metallic-gradient flex items-center justify-center border border-outline-variant rounded-[4px] mb-6">
+<span class="material-symbols-outlined text-primary text-[32px]">description</span>
+</div>
+<h4 class="font-headline-sm text-on-background mb-4 text-[20px]">Documentation</h4>
+<p class="text-on-surface-variant font-body-md">Precise handling of export permits and trade documents to ensure seamless customs clearance.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="py-section-gap bg-surface-container">
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-0">
+<div class="text-center mb-12">
+<span class="text-primary font-label-md tracking-widest uppercase">Inquiries</span>
+<h2 class="font-headline-md text-on-background mt-2">Professional Support</h2>
+</div>
+<div class="space-y-4">
+<!-- Accordion Item 1 -->
+<div class="bg-white border border-outline-variant overflow-hidden">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-[18px] text-on-background">How do you manage quality consistency?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300">add</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-8">
+<p class="pb-6 text-on-surface-variant font-body-md">We utilize standardized sorting and grading protocols. Each batch is inspected against pre-agreed specifications before final packaging and dispatch.</p>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="bg-white border border-outline-variant overflow-hidden">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-[18px] text-on-background">Can we request dedicated trade support?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300">add</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-8">
+<p class="pb-6 text-on-surface-variant font-body-md">Yes. Every institutional client is assigned a dedicated trade contact who manages the entire lifecycle of the procurement process, from quote to delivery.</p>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="bg-white border border-outline-variant overflow-hidden">
+<button class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-[18px] text-on-background">What are your typical payment structures?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300">add</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-8">
+<p class="pb-6 text-on-surface-variant font-body-md">We follow international trade norms including Letters of Credit (L/C) and Bank Guarantees, tailored to foster long-term partnerships and mutual security.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Standardized Footer -->
+<div data-include="../components/footer.html"></div>
+<div data-include="../components/whatsapp.html"></div>
+<script src="../components/loader.js"></script>
+<script>
+        document.addEventListener('partialsLoaded', function () {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.hero-slide');
+
+            function showSlide(index) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (index + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() { showSlide(currentSlide + 1); }
+            function prevSlide() { showSlide(currentSlide - 1); }
+
+            setInterval(nextSlide, 5000);
+        });
+
+        function toggleAccordion(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.material-symbols-outlined');
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.textContent = 'add';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.textContent = 'remove';
+            }
+        }
+    </script>
+</body></html>
