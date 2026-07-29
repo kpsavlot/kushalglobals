@@ -149,16 +149,16 @@
 <p class="text-on-surface-variant italic">Direct oversight of every link in the global supply chain.</p>
 </div>
 <div class="flex flex-wrap gap-3">
-<button class="filter-btn bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md shadow-sm">All Stages</button>
-<button class="filter-btn bg-white border border-outline-variant text-on-surface-variant px-6 py-2 rounded-lg font-label-md hover:border-primary transition-colors">On-Farm</button>
-<button class="filter-btn bg-white border border-outline-variant text-on-surface-variant px-6 py-2 rounded-lg font-label-md hover:border-primary transition-colors">Refinement</button>
-<button class="filter-btn bg-white border border-outline-variant text-on-surface-variant px-6 py-2 rounded-lg font-label-md hover:border-primary transition-colors">Port Logistics</button>
+<button class="filter-btn bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md shadow-sm" data-filter="all">All Stages</button>
+<button class="filter-btn bg-white border border-outline-variant text-on-surface-variant px-6 py-2 rounded-lg font-label-md hover:border-primary transition-colors" data-filter="farm">On-Farm</button>
+<button class="filter-btn bg-white border border-outline-variant text-on-surface-variant px-6 py-2 rounded-lg font-label-md hover:border-primary transition-colors" data-filter="refinement">Refinement</button>
+<button class="filter-btn bg-white border border-outline-variant text-on-surface-variant px-6 py-2 rounded-lg font-label-md hover:border-primary transition-colors" data-filter="port">Port Logistics</button>
 </div>
 </div>
 <!-- Bento Grid -->
 <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[250px]">
 <!-- Harvesting Large -->
-<div class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant">
+<div class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant" data-category="farm">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDL9fBTcHgqKCDEzK1iF8ko_EmAwcgvuBUK7HiLUrqdAVNJgIhY0yZZklE9ymshzZ66SEmvvGwcDlQi9F4NaEJtxRHwK7o31jZC0ks9LLCp5RXI5AwALIm3nnEWRGUVQBVEmf6kZHjdIvUF2n2bl4HCXEQ4rW-xZj8HBT9A_Ib95FLQVIBqGUbt4onNqLeiEGKRszVEtNX76bgUS68pfY31qqddyLd2ItTFC859UzLa5e5CQ_FnetbJKg')">
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent opacity-60"></div>
@@ -171,7 +171,7 @@
 </div>
 </div>
 <!-- Packaging Facility -->
-<div class="md:col-span-4 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant">
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant" data-category="refinement">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmd5eBzgFooJpsDeWbXpB9wSFn7MaqRQWAwITcVLqdzpD7VVAc7otFdcBFZH4YMME9FnU7-MfKwNA1Sl-Kv-Hof6Bc0P90MNtuP89ZK7eR_Eo-DeQgi4D3vzMn2nXgb8K9gCeBqOhm9DG4BwV6FWbA286faYoHjc0hrtS9YikaXybpNgGwCMVpXfZT9MRSv8IpK3Rt07vgFwBMjRV2rTB1yglrUGDw9Xv0YGqHFAO_w3znrpvwFzny2g')">
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent opacity-60"></div>
@@ -180,7 +180,7 @@
 </div>
 </div>
 <!-- Quality Check -->
-<div class="md:col-span-4 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant">
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant" data-category="refinement">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApN44Zry1mFXMMUfCKfSLpnphaT98deQRx-NguxeM7es34J4c5y0FHytEorEyBLTNlY4JmJSaVbP_4TJ4-EhLo3awHiCKEbgRN2_KFvt-f8YKjaSoM0A0dYoLCNXkdbQMHWDcNcChbuF-1NHIKs9FD2zB5HZTRQIvm4TZOPk4v5ByKB49dygh39vr8_JYrswubxHTFoEjnB7LPM1mUUzY8LfEmSrmj1eW4T4llVZcBkn8NphCXCiWscg')">
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent opacity-60"></div>
@@ -189,7 +189,7 @@
 </div>
 </div>
 <!-- Logistics Center -->
-<div class="md:col-span-4 md:row-span-2 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant">
+<div class="md:col-span-4 md:row-span-2 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant" data-category="port">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFU1KERt7yRGBGsVNrpbbVBxeW336aJRTjO13qIX7WPem7UuaMFbGqqmF2lOIFyEhGeFBEnxPB1PRPaJG_L_Y_uKG5aWbHJrEpoPCXNdgRerUkxEybkQTjsW6gtLDl_V05VfzyqlogzAw3fUgt67RpFAv6K6KWm-mp7ZvdUj42spsfRKLUoD-ekkURSx6qELPsyKOnRqToHkMcjBBXdDEzpC1kIc7XZawJ7WKHhQyMd7mXEbDVt-a7zQ')">
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-on-background/80 to-transparent opacity-60"></div>
@@ -199,7 +199,7 @@
 </div>
 </div>
 <!-- Warehousing -->
-<div class="md:col-span-8 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant">
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl gallery-card shadow-sm border border-outline-variant" data-category="port">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDQBtUcSzELH0AqOYd3uvSz8FlD3kyxtdiGaelLqg_UlFxfCEVevfRyc1AeI9aOPcP0tCpFHy1b9B5jCL8bxmOU4lVNlD4JW8zNEPfKCZiCFq8jUobSn-JJX54JnXGJOR5JgZ_tLfOy3zPP_MkH3OWus99rAxUNLn_8FXnkUwmaLNl6x4Fu5gDhQiFJwpvtKOI62hDslQeCo1fu6DK3LmIdrLsfbwKa4pgHalO2yIiSqJNPFghNRGLhA')">
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent opacity-60"></div>
@@ -221,15 +221,26 @@
 <script src="../components/loader.js"></script>
 <script>
     document.addEventListener('partialsLoaded', function () {
-        // Simple filtering logic
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.filter-btn').forEach(b => {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('[data-category]');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                filterBtns.forEach(b => {
                     b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
                     b.classList.add('bg-white', 'text-on-surface-variant', 'border-outline-variant');
                 });
                 this.classList.remove('bg-white', 'text-on-surface-variant', 'border-outline-variant');
                 this.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+                const filter = this.dataset.filter;
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
             });
         });
     });
