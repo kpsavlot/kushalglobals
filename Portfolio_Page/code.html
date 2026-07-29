@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products | KUSHAL GLOBALS - Premium Agricultural Supply</title>
+<meta content="Explore our premium range of agricultural products. Focused on reliability and quality for global trade." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c4c6cc",
+                        "surface-container-highest": "#e2e3e0",
+                        "primary-container": "#097969",
+                        "surface-container-low": "#f4f4f1",
+                        "secondary-fixed": "#e0e2e8",
+                        "secondary-container": "#e0e2e8",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f9f9f7",
+                        "on-secondary-container": "#616569",
+                        "inverse-primary": "#7cd7c3",
+                        "error": "#ba1a1a",
+                        "secondary": "#5b5f63",
+                        "inverse-surface": "#2f3130",
+                        "outline-variant": "#bdc9c5",
+                        "primary-fixed-dim": "#7cd7c3",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-fixed-variant": "#44474b",
+                        "on-surface-variant": "#3e4946",
+                        "tertiary-fixed": "#e2e2e2",
+                        "tertiary": "#515353",
+                        "outline": "#6e7a76",
+                        "surface-tint": "#006b5c",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadad8",
+                        "background": "#f9f9f7",
+                        "tertiary-container": "#6a6b6b",
+                        "surface-variant": "#e2e3e0",
+                        "surface": "#f9f9f7",
+                        "on-secondary-fixed": "#181c20",
+                        "primary": "#005e51",
+                        "surface-container": "#eeeeec",
+                        "on-primary-fixed": "#00201b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed-variant": "#005045",
+                        "on-primary-container": "#a3feea",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1a1c1b",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-background": "#1a1c1b",
+                        "inverse-on-surface": "#f1f1ef",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#98f3df",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#eceded",
+                        "surface-container-high": "#e8e8e6",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap": "5rem",
+                        "margin-mobile": "1rem",
+                        "gutter": "1.5rem",
+                        "component-padding": "1rem",
+                        "margin-desktop": "2.5rem"
+                    },
+                    "fontFamily": {
+                        "caption": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-filter {
+            background-color: #005e51;
+            color: white;
+        }
+        .product-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+        .coming-soon-overlay {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(2px);
+        }
+    </style>
+    <style>
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .whatsapp-pulse {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(9, 121, 105, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(9, 121, 105, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(9, 121, 105, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<div data-include="../components/utility-bar.html"></div>
+<div data-include="../components/navbar.html"></div>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[400px] md:h-[500px] w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiXQmoGMhNE0jwdY6mhUJ2NmMiVUPB4Q7kH1MsmOD9ZWNDkgG9x4qCOaP6_FnvGG9co5dH2bz_-n7y8IMtN81IX2Jm_A14uP5lc99ImM-Jn1-0qLCq1owx2zkQHvFZVfUKcr0p_L1SOTIFDJs2VtJEJl-z5KUzLo1j73TnYTEsrk3t2phR3mCYxaAhh4WzTJLLlW04ZOlq866vUghornDxj1oXSbgKYIxe0j25_VQaQyMyaSm0EAOxBg')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full pt-20">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">Simplifying Global Sourcing</h1>
+<p class="font-body-lg text-white/90 max-w-2xl leading-relaxed">We focus on consistent quality and transparent communication to make your procurement process effortless. Your trust is our most valuable asset.</p>
+</div>
+</section>
+<!-- Filter Bar -->
+<section class="bg-white border-b border-outline-variant shadow-sm">
+<div class="max-w-container-max mx-auto px-margin-desktop py-6 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-6 py-2 rounded-full font-label-md text-label-md active-filter transition-all border border-primary" data-filter="all">All</button>
+<button class="px-6 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all border border-transparent" data-filter="vegetables">Vegetables</button>
+<button class="px-6 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all border border-transparent" data-filter="fruits">Fruits</button>
+<button class="px-6 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all border border-transparent" data-filter="spices">Spices</button>
+<button class="px-6 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all border border-transparent" data-filter="grains">Grains</button>
+</div>
+<div class="relative min-w-[300px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low border border-outline-variant rounded-full focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Search available stock..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Active Product: Onions -->
+<a href="#" class="product-card-hover flex flex-col bg-white border border-outline-variant rounded-xl overflow-hidden transition-all duration-300" data-category="vegetables">
+<div class="h-64 overflow-hidden relative group">
+<img alt="Premium Red Onions" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZbMFV6-bboGpI05xfPPIg6w3_lECkoePtj5H8rncAD1AEcIFFGbbsNEsok3UpJAiA36jvppxcvZts_uJEZ3I3aj6O7r7Nr-Ltq9Dp8zO4VFn8tMBdKvCN0b24iMNY4kXiFYAcAxyxzPVCZw5O-u88c2hy0MSqlIAV6vWrjEW7-S5tCLvw0sbJElETeaeXJA89bepEtaoRoaZInqNJQtwrYdMUSkstjjtMqMahS9QHqDOC_hoAawiu8Q"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-primary font-label-md text-label-md mb-2">VEGETABLES</span>
+<h3 class="font-headline-sm text-headline-sm mb-1 text-on-background">Fresh Red Onion</h3>
+<p class="font-body-md text-on-surface-variant italic mb-4 text-sm">Consistent Grade-A Quality</p>
+<div class="mt-auto space-y-4">
+<div class="flex justify-between items-center text-caption text-outline">
+<span>Origin: India</span>
+<span>Scale: High Capacity</span>
+</div>
+</div>
+</div>
+</a>
+<!-- Active Product: Potatoes -->
+<a href="#" class="product-card-hover flex flex-col bg-white border border-outline-variant rounded-xl overflow-hidden transition-all duration-300" data-category="vegetables">
+<div class="h-64 overflow-hidden relative group">
+<img alt="Premium Potatoes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzXOEzGSLadzAsMArGntzmcJqupXEGD_KTAWRUsa4O3AMnmFYCBRXlbCyml84e8IAtfG3kp4N2QRwvQrB1IedsTjRj_g3FZ6BR6O02O9sqMaaYT7ro1whyWd8Qn51qZnunsSwdpn6EgNru-r78g0gB3F-WSgu5udF1QM401mVAZ0EN5V1INQoB1GUa6oCBI8K6Ei2huzcyCSJXatpbbduqYdYslDxpg8qdtkisqE7QJL067cvVuMM7kg"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-primary font-label-md text-label-md mb-2">VEGETABLES</span>
+<h3 class="font-headline-sm text-headline-sm mb-1 text-on-background">Fresh Potato</h3>
+<p class="font-body-md text-on-surface-variant italic mb-4 text-sm">Long-life Varieties</p>
+<div class="mt-auto space-y-4">
+<div class="flex justify-between items-center text-caption text-outline">
+<span>Origin: India</span>
+<span>Multiple Grades Available</span>
+</div>
+</div>
+</div>
+</a>
+<!-- Active Product: Green Chilli -->
+<a href="#" class="product-card-hover flex flex-col bg-white border border-outline-variant rounded-xl overflow-hidden transition-all duration-300" data-category="vegetables">
+<div class="h-64 overflow-hidden relative group">
+<img alt="Fresh Green Chilli" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL0rLcdhUg347dzrxnfV9WThTHTODXrKkwQ6-wVtEAp5qT5Ta0YWnTs-kcQfdjzN6VX9Lqzn1risD-OcpgMRr0UULHOg2-9XbabyA27JeKksdJX3h1Oa9tQtz1i0vs_U6uJUdpJR5X1RVXekVmceEC6XmYxqkdU89799jrNe4WXa7LZeOxwgw81o97vEPb7sIlrG-d1VcBwiTwSu04ggf1X3uX4WvgH8fW19WGKdWoBVFqKz7LR_5fMQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-primary font-label-md text-label-md mb-2">VEGETABLES</span>
+<h3 class="font-headline-sm text-headline-sm mb-1 text-on-background">Fresh Green Chilli</h3>
+<p class="font-body-md text-on-surface-variant italic mb-4 text-sm">Premium quality, carefully graded for export.</p>
+<div class="mt-auto space-y-4">
+<div class="flex justify-between items-center text-caption text-outline">
+<span>Origin: India</span>
+<span>High Capacity</span>
+</div>
+</div>
+</div>
+</a>
+<!-- Coming Soon: Grains -->
+<div class="flex flex-col bg-white border border-outline-variant rounded-xl overflow-hidden opacity-70 relative" data-category="grains">
+<div class="coming-soon-overlay absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-6">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">lock_clock</span>
+<span class="font-headline-sm text-primary">Coming Soon</span>
+<p class="text-sm mt-2 font-medium">Quality Testing in Progress</p>
+</div>
+<div class="h-64 overflow-hidden">
+<img alt="Grains" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPnxSqYrevXBBIsNmST-RZjhLZEFwSa0IAEx8DRC6jM6uoZ0HnuuoadsemRgG26o5IDoOb04kJfkD9LPtsV5T_tK98dF3pHZIYtSLbZQ9ZxFzWqC-LUs2n8FjQuVma_JErgHzgRBPUNj2Ps4QTgd0cndrChSdtgw_GxYjEqW7RfeYB-aQmN5OP8F2f1u2tCOspsFi7yiHNGiYnExxG3wBI383PWfr3RODmeVYuds9MlYovEmJFWNFHIA"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-outline font-label-md text-label-md mb-2">GRAINS</span>
+<h3 class="font-headline-sm text-headline-sm mb-1 text-outline">Basmati Rice</h3>
+<p class="font-body-md text-outline italic mb-4 text-sm">Premium basmati, quality testing underway.</p>
+<div class="mt-auto pt-4 border-t border-outline-variant">
+<div class="text-caption text-outline-variant">Expanding our network...</div>
+</div>
+</div>
+</div>
+<!-- Coming Soon: Spices -->
+<div class="flex flex-col bg-white border border-outline-variant rounded-xl overflow-hidden opacity-70 relative" data-category="spices">
+<div class="coming-soon-overlay absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-6">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">lock_clock</span>
+<span class="font-headline-sm text-primary">Coming Soon</span>
+</div>
+<div class="h-64 overflow-hidden">
+<img alt="Spices" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL0rLcdhUg347dzrxnfV9WThTHTODXrKkwQ6-wVtEAp5qT5Ta0YWnTs-kcQfdjzN6VX9Lqzn1risD-OcpgMRr0UULHOg2-9XbabyA27JeKksdJX3h1Oa9tQtz1i0vs_U6uJUdpJR5X1RVXekVmceEC6XmYxqkdU89799jrNe4WXa7LZeOxwgw81o97vEPb7sIlrG-d1VcBwiTwSu04ggf1X3uX4WvgH8fW19WGKdWoBVFqKz7LR_5fMQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-outline font-label-md text-label-md mb-2">SPICES</span>
+<h3 class="font-headline-sm text-headline-sm mb-1 text-outline">Turmeric</h3>
+<p class="font-body-md text-outline italic mb-4 text-sm">Premium grade, sourcing in progress.</p>
+<div class="mt-auto pt-4 border-t border-outline-variant">
+<div class="text-caption text-outline-variant">Sourcing & grading in progress...</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Building Section -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">A Reliable Foundation for Your Business</h2>
+<p class="max-w-2xl mx-auto text-on-surface-variant font-body-lg">We understand that global trade is about more than just commodities. It's about reliability, clear communication, and making your job easier every day.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[36px]">handshake</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-background">Commitment to Service</h4>
+<p class="text-on-surface-variant leading-relaxed">We don't just ship products; we provide peace of mind through constant updates and proactive problem-solving.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[36px]">insights</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-background">Long-Term Value</h4>
+<p class="text-on-surface-variant leading-relaxed">Our focus is on building sustainable partnerships where both sides grow together through honest dealing.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[36px]">task_alt</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-background">Procurement Made Easy</h4>
+<p class="text-on-surface-variant leading-relaxed">We take the complexity out of international sourcing, handling the details so you can focus on your local market.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div data-include="../components/footer.html"></div>
+<div data-include="../components/whatsapp.html"></div>
+<script src="../components/loader.js"></script>
+<script>
+    document.addEventListener('partialsLoaded', function () {
+        const filterBtns = document.querySelectorAll('[data-filter]');
+        const cards = document.querySelectorAll('[data-category]');
+        const searchInput = document.querySelector('input[type="text"]');
+
+        function filterCards() {
+            const activeFilter = document.querySelector('[data-filter].active-filter');
+            const filter = activeFilter ? activeFilter.dataset.filter : 'all';
+            const query = searchInput ? searchInput.value.toLowerCase() : '';
+
+            cards.forEach(card => {
+                const category = card.dataset.category;
+                const matchFilter = filter === 'all' || category === filter;
+                const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+                const desc = card.textContent.toLowerCase();
+                const matchSearch = !query || title.includes(query) || desc.includes(query);
+                card.style.display = matchFilter && matchSearch ? '' : 'none';
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active-filter', 'border-primary');
+                    b.classList.add('bg-surface-container', 'text-on-surface-variant', 'border-transparent');
+                });
+                this.classList.add('active-filter', 'border-primary');
+                this.classList.remove('bg-surface-container', 'text-on-surface-variant', 'border-transparent');
+                filterCards();
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', filterCards);
+        }
+    });
+</script>
+</body></html>
