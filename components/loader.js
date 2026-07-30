@@ -48,10 +48,10 @@
   // Custom scrollbar style
   var scrollStyle = document.createElement('style');
   scrollStyle.textContent =
-    '::-webkit-scrollbar { width: 6px; }' +
+    '::-webkit-scrollbar { width: 4px; background: transparent; }' +
     '::-webkit-scrollbar-track { background: transparent; }' +
-    '::-webkit-scrollbar-thumb { background: #005e51; border-radius: 3px; }' +
-    '::-webkit-scrollbar-button { display: none; }' +
+    '::-webkit-scrollbar-thumb { background: #005e51; border-radius: 2px; }' +
+    '::-webkit-scrollbar-button { display: none; width: 0; height: 0; }' +
     '* { scrollbar-width: thin; scrollbar-color: #005e51 transparent; }';
   document.head.appendChild(scrollStyle);
 
@@ -64,7 +64,7 @@
     '<div class="bg-primary text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform duration-300">' +
     '<span class="material-symbols-outlined text-[20px]">arrow_upward</span></div>';
   Object.assign(topBtn.style, {
-    position: 'fixed', bottom: '16px', right: '32px', zIndex: '99',
+    position: 'fixed', bottom: '104px', right: '32px', zIndex: '99',
     opacity: '0', transform: 'translateY(20px)',
     transition: 'opacity 0.3s, transform 0.3s', pointerEvents: 'none'
   });
