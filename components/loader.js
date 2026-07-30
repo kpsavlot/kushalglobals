@@ -25,6 +25,9 @@
     if (href && href.includes('Portfolio_Page') && path.includes('Product_Page')) {
       match = true;
     }
+    if (href && href.includes('Blog_Page') && path.includes('Article_Page')) {
+      match = true;
+    }
     if (match) {
       link.classList.add('text-primary', 'border-b-2', 'border-primary', 'pb-1', 'font-bold');
       link.classList.remove('text-on-surface-variant', 'font-medium');
