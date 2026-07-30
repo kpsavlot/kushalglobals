@@ -178,49 +178,12 @@
 <span class="text-primary font-label-md uppercase tracking-widest mb-2 block">Knowledge Hub</span>
 <h2 class="font-headline-md text-headline-md text-on-background">Latest Trade Updates</h2>
 </div>
-<a class="hidden md:flex items-center gap-2 text-primary font-label-md hover:underline" href="../Blog_Page/code.html">
-                        View All Articles
+<a class="hidden md:flex items-center gap-2 text-primary font-label-md" href="../Blog_Page/code.html">
+                        <span class="hover:underline">View All Articles</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
 </a>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition-all border border-outline-variant/20">
-<div class="h-48 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro close-up of premium quality golden wheat grains spilling from a woven burlap sack onto a clean, white marble surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrv4LHkXm4wFtRav17Cv2_Rbhreo7u260VFyIpXtxrNZZ78M1hJD31Sjlj6zOIOjglixXBM9cul6MedJono6XGT1lRepWF6Ft-gAzdnA3ZnkcDfsNkVr0Gl_C0i-FJEyGoscDzNbXIK8ZZ_ywT6F4itEVS0D1OhnjA-VvWuQOVqkHeKlmghwojkvM_WrBSPhyrPtwNuC9k9kereFjy476LiLIzT7LMH8f02Qx-uTsGT82dNM6hhiirkQ"/>
-</div>
-<div class="p-6">
-<span class="text-caption text-primary font-bold uppercase mb-2 block">Quality Standards</span>
-<h3 class="font-headline-sm text-[20px] mb-4 text-on-background leading-snug">The New ISO Protocols for Bulk Exports</h3>
-<a class="flex items-center gap-2 text-primary font-label-md text-sm" href="#">
-                                Read Insight <span class="material-symbols-outlined text-[16px]">north_east</span>
-</a>
-</div>
-</div>
-<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition-all border border-outline-variant/20">
-<div class="h-48 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated map visualization showing global trade routes connecting major ports like Singapore, Rotterdam, and Mumbai." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPAIrv4KTR7jHY7zALMCmlCjLZb5ZM766_NQbpmki1TY9VFeP0EluRUOKf-TaIzNz90uhvrDicWV82VyXeG4FsN6f6vdiCWZAXPyC7vz2b0psOUZaAkqsLpQoaL7daiYEc1QDeihJYzSAeLy3mTLD1Q_34ozChrKnpo86RrArNL8tCeNBQoYWzpd481mKtQUXmDnOPkpTKZ6k0Hy6w5DK1LneMcPuYKmG3IRxeTBJxn4AKbNjyWL4dgg"/>
-</div>
-<div class="p-6">
-<span class="text-caption text-primary font-bold uppercase mb-2 block">Logistics</span>
-<h3 class="font-headline-sm text-[20px] mb-4 text-on-background leading-snug">Navigating Ocean Freight Volatility in 2024</h3>
-<a class="flex items-center gap-2 text-primary font-label-md text-sm" href="#">
-                                Read Insight <span class="material-symbols-outlined text-[16px]">north_east</span>
-</a>
-</div>
-</div>
-<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition-all border border-outline-variant/20">
-<div class="h-48 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern office interior featuring a sleek boardroom with large windows overlooking a busy commercial district." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDfGfJo8eIPB8sMx_3FV-tfmprnFNoAGr0M74B2GmeCK0iKv6K-SVl5SN7njr12KhgR6mVElmUpx6t1Osaf-Hi866FjZKZA-57OejDJO67fekRd6vueSiXqjhdCoabYSlI8sTcGlI1dnBxOLaGlB9O_Sur8-LQI4-sZjvQNX6pPDI7NryUooiwhCTyBbFJTNK7MEXluHcgVaYVZ3EcweqFxDOzRTmRe2OwZPAxdo7rrQTUop7dwok6dg"/>
-</div>
-<div class="p-6">
-<span class="text-caption text-primary font-bold uppercase mb-2 block">Market Trends</span>
-<h3 class="font-headline-sm text-[20px] mb-4 text-on-background leading-snug">Pulse Trading: Demand Surges in Asia Pacific</h3>
-<a class="flex items-center gap-2 text-primary font-label-md text-sm" href="#">
-                                Read Insight <span class="material-symbols-outlined text-[16px]">north_east</span>
-</a>
-</div>
-</div>
-</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter" id="related-articles"></div>
 </div>
 </section>
 </main>
@@ -254,6 +217,28 @@
                 document.getElementById('article-author-image').alt = article.author;
                 document.getElementById('article-author-quote').textContent = article.authorQuote;
                 document.getElementById('article-author-name').textContent = article.authorName;
+
+                const relatedContainer = document.getElementById('related-articles');
+                relatedContainer.innerHTML = '';
+                const relatedKeys = Object.keys(articles).filter(k => k !== articleKey);
+                relatedKeys.slice(0, 3).forEach(function (key) {
+                    const a = articles[key];
+                    const card = document.createElement('div');
+                    card.className = 'bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition-all border border-outline-variant/20 cursor-pointer';
+                    card.addEventListener('click', function () {
+                        window.location.href = '?article=' + key;
+                    });
+                    card.innerHTML =
+                        '<div class="h-48 overflow-hidden">' +
+                            '<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="' + a.featuredAlt.replace(/"/g, '&quot;') + '" src="' + a.featuredImage + '"/>' +
+                        '</div>' +
+                        '<div class="p-6">' +
+                            '<span class="text-caption text-primary font-bold uppercase mb-2 block">' + a.cardCategory + '</span>' +
+                            '<h3 class="font-headline-sm text-[20px] mb-4 text-on-background leading-snug">' + a.title + '</h3>' +
+                            '<a class="flex items-center gap-2 text-primary font-label-md text-sm" href="?article=' + key + '">Read Insight <span class="material-symbols-outlined text-[16px]">north_east</span></a>' +
+                        '</div>';
+                    relatedContainer.appendChild(card);
+                });
             })
             .catch(function () {
                 document.querySelector('main').innerHTML = '<div style="padding:4rem;text-align:center;"><h1>Failed to load article</h1></div>';
