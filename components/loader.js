@@ -87,5 +87,39 @@
       topBtn.style.pointerEvents = 'none';
     }
   });
+  // Google Translate
+  var gtStyle = document.createElement('style');
+  gtStyle.textContent =
+    '.goog-te-banner-frame{display:none!important}body{top:0!important}' +
+    '.goog-te-gadget-simple{background:transparent!important;border:none!important;font-size:inherit!important;line-height:inherit!important;display:inline-flex!important;align-items:center!important;gap:4px!important;padding:0!important}' +
+    '.goog-te-gadget-simple .goog-te-menu-value{color:inherit!important;text-decoration:none!important}' +
+    '.goog-te-gadget-simple .goog-te-menu-value span{color:inherit!important;border-bottom:none!important}' +
+    '.goog-te-gadget-simple .goog-te-gadget-icon{display:none!important}' +
+    '.goog-te-gadget-simple .goog-te-menu-value span[style]{display:none!important}' +
+    '.goog-te-gadget-simple .goog-te-menu-value span:last-child{display:inline!important}';
+  document.head.appendChild(gtStyle);
+
+  // Protect icons from Google Translate
+  document.querySelectorAll('.material-symbols-outlined, .fas, .far, .fab').forEach(function (el) {
+    el.classList.add('notranslate');
+  });
+
+  window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  };
+  var gts = document.createElement('script');
+  gts.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  gts.async = true;
+  document.head.appendChild(gts);
+
+  // Wire language button to Google Translate widget
+  document.getElementById('lang-btn')?.addEventListener('click', function () {
+    var gadget = document.querySelector('#google_translate_element .goog-te-gadget-simple');
+    if (gadget) gadget.click();
+  });
+
   document.dispatchEvent(new CustomEvent('partialsLoaded'));
 })();

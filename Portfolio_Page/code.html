@@ -328,6 +328,14 @@
             });
         });
 
+        // Activate filter from URL parameter
+        var params = new URLSearchParams(window.location.search);
+        var cat = params.get('category');
+        if (cat) {
+            var target = document.querySelector('[data-filter="' + cat + '"]');
+            if (target) target.click();
+        }
+
         if (searchInput) {
             searchInput.addEventListener('input', filterCards);
         }
