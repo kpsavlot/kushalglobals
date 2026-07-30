@@ -45,5 +45,45 @@
       }
     }
   });
+  // Custom scrollbar style
+  var scrollStyle = document.createElement('style');
+  scrollStyle.textContent =
+    '::-webkit-scrollbar { width: 6px; }' +
+    '::-webkit-scrollbar-track { background: transparent; }' +
+    '::-webkit-scrollbar-thumb { background: #005e51; border-radius: 3px; }' +
+    '::-webkit-scrollbar-button { display: none; }' +
+    '* { scrollbar-width: thin; scrollbar-color: #005e51 transparent; }';
+  document.head.appendChild(scrollStyle);
+
+  // Jump-to-top button
+  var topBtn = document.createElement('a');
+  topBtn.href = '#';
+  topBtn.id = 'top-btn';
+  topBtn.setAttribute('aria-label', 'Scroll to top');
+  topBtn.innerHTML =
+    '<div class="bg-primary text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform duration-300">' +
+    '<span class="material-symbols-outlined text-[20px]">arrow_upward</span></div>';
+  Object.assign(topBtn.style, {
+    position: 'fixed', bottom: '16px', right: '32px', zIndex: '99',
+    opacity: '0', transform: 'translateY(20px)',
+    transition: 'opacity 0.3s, transform 0.3s', pointerEvents: 'none'
+  });
+  topBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.body.appendChild(topBtn);
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) {
+      topBtn.style.opacity = '1';
+      topBtn.style.transform = 'translateY(0)';
+      topBtn.style.pointerEvents = 'auto';
+    } else {
+      topBtn.style.opacity = '0';
+      topBtn.style.transform = 'translateY(20px)';
+      topBtn.style.pointerEvents = 'none';
+    }
+  });
   document.dispatchEvent(new CustomEvent('partialsLoaded'));
 })();
