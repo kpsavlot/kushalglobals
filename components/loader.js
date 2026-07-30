@@ -33,10 +33,21 @@
       link.classList.remove('text-on-surface-variant', 'font-medium');
     }
   });
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('main-nav');
+  // initLenis
+  window.lenis = new Lenis({
+    duration: 1.2,
+    easing: t => Math.min(1, 1.001 - 2 ** (-10 * t))
+  });
+  function raf(time) { window.lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+  var ro = new ResizeObserver(function () { window.lenis.resize(); });
+  ro.observe(document.documentElement);
+
+  // Navbar shadow on scroll
+  window.lenis.on('scroll', function () {
+    var nav = document.getElementById('main-nav');
     if (nav) {
-      if (window.scrollY > 20) {
+      if (window.lenis.scroll > 20) {
         nav.classList.add('top-12', 'shadow-xl');
         nav.classList.remove('top-14');
       } else {
@@ -61,12 +72,12 @@
   });
   topBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.lenis.scrollTo(0);
   });
   document.body.appendChild(topBtn);
 
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 400) {
+  window.lenis.on('scroll', function () {
+    if (window.lenis.scroll > 400) {
       topBtn.style.opacity = '1';
       topBtn.style.transform = 'translateY(0)';
       topBtn.style.pointerEvents = 'auto';
