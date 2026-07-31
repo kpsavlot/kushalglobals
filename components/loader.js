@@ -12,7 +12,7 @@
   const navLinks = document.querySelectorAll('.nav-link');
   const path = window.location.pathname.replace(/\/+/g, '/');
   navLinks.forEach(link => {
-    link.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1', 'font-bold');
+    link.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1', 'font-bold', 'bg-primary/10');
     link.classList.add('text-on-surface-variant', 'font-medium');
     const href = link.getAttribute('href');
     let match = false;
@@ -28,11 +28,69 @@
     if (href && href.includes('Blog_Page') && path.includes('Article_Page')) {
       match = true;
     }
+    if (link.dataset.nav === 'products' && (path.includes('Portfolio_Page') || path.includes('Product_Page'))) {
+      match = true;
+    }
     if (match) {
-      link.classList.add('text-primary', 'border-b-2', 'border-primary', 'pb-1', 'font-bold');
+      link.classList.add('text-primary', 'font-bold');
       link.classList.remove('text-on-surface-variant', 'font-medium');
+      if (link.closest('#mobile-menu')) {
+        link.classList.add('bg-primary/10');
+      } else {
+        link.classList.add('border-b-2', 'border-primary', 'pb-1');
+      }
     }
   });
+
+  // Mobile menu toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navIcon = document.getElementById('nav-toggle-icon');
+  const mainNav = document.getElementById('main-nav');
+  if (navToggle && mobileMenu && navIcon) {
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      navIcon.textContent = 'menu';
+      navToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.querySelectorAll('.mobile-submenu').forEach(function (sub) {
+        sub.classList.add('hidden');
+      });
+      mobileMenu.querySelectorAll('.mobile-submenu-toggle .material-symbols-outlined').forEach(function (icon) {
+        icon.style.transform = '';
+      });
+    }
+    navToggle.addEventListener('click', function () {
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        navIcon.textContent = 'close';
+        navToggle.setAttribute('aria-expanded', 'true');
+      } else {
+        closeMenu();
+      }
+    });
+    mobileMenu.querySelectorAll('.mobile-submenu-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = btn.closest('.mobile-nav-item');
+        var sub = item ? item.querySelector('.mobile-submenu') : null;
+        var icon = btn.querySelector('.material-symbols-outlined');
+        if (sub) {
+          sub.classList.toggle('hidden');
+          if (icon) {
+            icon.style.transform = sub.classList.contains('hidden') ? '' : 'rotate(180deg)';
+          }
+        }
+      });
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+    document.addEventListener('click', function (e) {
+      if (mainNav && !mainNav.contains(e.target)) closeMenu();
+    });
+  }
   // initLenis
   window.lenis = new Lenis({
     duration: 1.2,

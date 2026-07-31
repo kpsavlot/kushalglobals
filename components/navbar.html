@@ -1,20 +1,66 @@
-<nav class="fixed top-14 left-4 right-4 z-50 h-20 bg-white/90 glass-nav border border-outline-variant shadow-lg rounded-xl transition-all duration-300 max-w-container-max mx-auto" id="main-nav">
-<div class="flex justify-between items-center h-full px-8">
+<nav class="fixed top-14 left-4 right-4 z-50 bg-white/90 glass-nav border border-outline-variant shadow-lg rounded-xl transition-all duration-300 max-w-container-max mx-auto" id="main-nav">
+<div class="flex justify-between items-center h-20 px-4 md:px-8">
 <div class="flex items-center group cursor-pointer h-full">
-<img alt="Kushal Globals Logo" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCidYbK2qogjrxLI1zaHcb1KZ4XzEccrFllZZo0O8DRyDJC_aW4ZnI0ehNStzSQZQQgwcozW_g95ZtgO6gRPE6gJlRxgmPHCzqcrmTrF2LYXqYq80N05WgQy-uF9DJN6-pzXwBaZI4PjmyR_WpF1sx-E4gmlcQp3U6TA8ELBdiVafXMUEVQGiSJF3YmZ_dtQzOEjYuTnIna9lfjslpGtY6vpMBuHF3fp0VBO76nJ2ugnz-TmbR77Pq9S263U2CzzgNX1jo"/>
+<img alt="Kushal Globals Logo" class="h-12 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCidYbK2qogjrxLI1zaHcb1KZ4XzEccrFllZZo0O8DRyDJC_aW4ZnI0ehNStzSQZQQgwcozW_g95ZtgO6gRPE6gJlRxgmPHCzqcrmTrF2LYXqYq80N05WgQy-uF9DJN6-pzXwBaZI4PjmyR_WpF1sx-E4gmlcQp3U6TA8ELBdiVafXMUEVQGiSJF3YmZ_dtQzOEjYuTnIna9lfjslpGtY6vpMBuHF3fp0VBO76nJ2ugnz-TmbR77Pq9S263U2CzzgNX1jo"/>
 </div>
 <div class="hidden md:flex items-center gap-8 h-full">
 <a class="nav-link text-primary border-b-2 border-primary pb-1 font-bold font-label-md transition-all" href="../Home/code.html">Home</a>
 <a class="nav-link text-on-surface-variant font-medium font-label-md hover:text-primary transition-colors duration-300" href="../About_Page/code.html">About</a>
-<a class="nav-link text-on-surface-variant font-medium font-label-md hover:text-primary transition-colors duration-300" href="../Portfolio_Page/code.html">Products</a>
+<div class="relative group h-full flex items-center">
+<button class="nav-link flex items-center gap-1 text-on-surface-variant font-medium font-label-md hover:text-primary transition-colors duration-300 cursor-pointer" type="button" data-nav="products">
+                        Products
+                        <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
+</button>
+<div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300">
+<div class="bg-white border border-outline-variant shadow-xl rounded-xl overflow-hidden w-56 py-2">
+<a class="block px-5 py-2.5 text-on-surface-variant font-medium font-label-md hover:bg-primary/5 hover:text-primary transition-colors" href="../Product_Page/code.html?product=potatoes">Potatoes</a>
+<a class="block px-5 py-2.5 text-on-surface-variant font-medium font-label-md hover:bg-primary/5 hover:text-primary transition-colors" href="../Product_Page/code.html?product=onions">Onions</a>
+<a class="block px-5 py-2.5 text-on-surface-variant font-medium font-label-md hover:bg-primary/5 hover:text-primary transition-colors" href="../Product_Page/code.html?product=green-chilli">Green Chilli</a>
+<a class="block px-5 py-2.5 text-on-surface-variant font-medium font-label-md hover:bg-primary/5 hover:text-primary transition-colors" href="../Product_Page/code.html?product=turmeric">Turmeric</a>
+<a class="block px-5 py-2.5 text-on-surface-variant font-medium font-label-md hover:bg-primary/5 hover:text-primary transition-colors" href="../Product_Page/code.html?product=basmati-rice">Basmati Rice</a>
+<div class="border-t border-outline-variant my-2"></div>
+<a class="block px-5 py-2.5 text-primary font-bold font-label-md hover:bg-primary/5 transition-colors" href="../Portfolio_Page/code.html">View All Products</a>
+</div>
+</div>
+</div>
 <a class="nav-link text-on-surface-variant font-medium font-label-md hover:text-primary transition-colors duration-300" href="../Certificate_Page/code.html">Certificates</a>
 <a class="nav-link text-on-surface-variant font-medium font-label-md hover:text-primary transition-colors duration-300" href="../Gallery_Page/code.html">Gallery</a>
 <a class="nav-link text-on-surface-variant font-medium font-label-md hover:text-primary transition-colors duration-300" href="../Blog_Page/code.html">Blog</a>
 </div>
-<div class="flex items-center gap-4">
-<a href="../Contact_Page/code.html" class="bg-primary text-white px-8 py-3 font-bold font-label-md rounded-[4px] hover:bg-primary/90 transition-all scale-100 active:scale-95 inline-block">
+<div class="flex items-center gap-2 md:gap-4">
+<a href="../Contact_Page/code.html" class="hidden md:inline-block bg-primary text-white px-8 py-3 font-bold font-label-md rounded-[4px] hover:bg-primary/90 transition-all scale-100 active:scale-95">
                     Contact
                 </a>
+<button class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-highest transition-colors" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+<span class="material-symbols-outlined text-[28px]" id="nav-toggle-icon">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden border-t border-outline-variant rounded-b-xl overflow-hidden bg-white" id="mobile-menu">
+<div class="px-4 py-6 flex flex-col gap-1 max-h-[calc(100vh-10rem)] overflow-y-auto">
+<a class="nav-link px-4 py-3 font-label-md rounded-lg text-on-surface-variant font-medium transition-colors" href="../Home/code.html">Home</a>
+<a class="nav-link px-4 py-3 font-label-md rounded-lg text-on-surface-variant font-medium transition-colors" href="../About_Page/code.html">About</a>
+<div class="mobile-nav-item rounded-lg">
+<button class="mobile-submenu-toggle nav-link flex items-center justify-between w-full px-4 py-3 font-label-md rounded-lg text-on-surface-variant font-medium transition-colors" type="button" data-nav="products">
+<span>Products</span>
+<span class="material-symbols-outlined text-[22px] transition-transform duration-300">keyboard_arrow_down</span>
+</button>
+<div class="mobile-submenu hidden flex flex-col gap-1 pb-3 pl-2 pr-2">
+<a class="pl-4 py-2.5 text-on-surface-variant font-label-md rounded-lg hover:bg-surface-container-highest hover:text-primary transition-colors" href="../Product_Page/code.html?product=potatoes">Potatoes</a>
+<a class="pl-4 py-2.5 text-on-surface-variant font-label-md rounded-lg hover:bg-surface-container-highest hover:text-primary transition-colors" href="../Product_Page/code.html?product=onions">Onions</a>
+<a class="pl-4 py-2.5 text-on-surface-variant font-label-md rounded-lg hover:bg-surface-container-highest hover:text-primary transition-colors" href="../Product_Page/code.html?product=green-chilli">Green Chilli</a>
+<a class="pl-4 py-2.5 text-on-surface-variant font-label-md rounded-lg hover:bg-surface-container-highest hover:text-primary transition-colors" href="../Product_Page/code.html?product=turmeric">Turmeric</a>
+<a class="pl-4 py-2.5 text-on-surface-variant font-label-md rounded-lg hover:bg-surface-container-highest hover:text-primary transition-colors" href="../Product_Page/code.html?product=basmati-rice">Basmati Rice</a>
+<a class="pl-4 py-2.5 text-primary font-bold font-label-md rounded-lg hover:bg-surface-container-highest transition-colors" href="../Portfolio_Page/code.html">View All Products</a>
+</div>
+</div>
+<a class="nav-link px-4 py-3 font-label-md rounded-lg text-on-surface-variant font-medium transition-colors" href="../Certificate_Page/code.html">Certificates</a>
+<a class="nav-link px-4 py-3 font-label-md rounded-lg text-on-surface-variant font-medium transition-colors" href="../Gallery_Page/code.html">Gallery</a>
+<a class="nav-link px-4 py-3 font-label-md rounded-lg text-on-surface-variant font-medium transition-colors" href="../Blog_Page/code.html">Blog</a>
+<a class="bg-primary text-white text-center px-8 py-3 font-bold font-label-md rounded-lg hover:bg-primary/90 transition-all mt-4" href="../Contact_Page/code.html">
+                        Contact
+                    </a>
 </div>
 </div>
 </nav>
