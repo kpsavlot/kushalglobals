@@ -31,6 +31,9 @@
     if (link.dataset.nav === 'products' && (path.includes('Portfolio_Page') || path.includes('Product_Page'))) {
       match = true;
     }
+    if (href && href.includes('/Home/') && (path === '/' || path === '/index.html')) {
+      match = true;
+    }
     if (match) {
       link.classList.add('text-primary', 'font-bold');
       link.classList.remove('text-on-surface-variant', 'font-medium');
