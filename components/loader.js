@@ -22,13 +22,13 @@
         match = true;
       }
     }
-    if (href && href.includes('Portfolio_Page') && path.includes('Product_Page')) {
+    if (href && href.includes('Portfolio') && path.includes('Product')) {
       match = true;
     }
-    if (href && href.includes('Blog_Page') && path.includes('Article_Page')) {
+    if (href && href.includes('Blog') && path.includes('Article')) {
       match = true;
     }
-    if (link.dataset.nav === 'products' && (path.includes('Portfolio_Page') || path.includes('Product_Page'))) {
+    if (link.dataset.nav === 'products' && (path.includes('Portfolio') || path.includes('Product'))) {
       match = true;
     }
     if (href && href.includes('/Home/') && (path === '/' || path === '/index.html')) {

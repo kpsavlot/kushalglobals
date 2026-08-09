@@ -130,7 +130,7 @@
 </div>
 <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full text-white">
 <nav class="flex items-center gap-2 text-caption font-label-md mb-4 uppercase tracking-widest opacity-80">
-<a class="hover:text-white transition-colors" href="../Portfolio_Page/code.html">Products</a>
+<a class="hover:text-white transition-colors" href="../Portfolio/">Products</a>
 <span>/</span>
 <span id="breadcrumb-product" class="text-white font-bold"></span>
 </nav>
@@ -243,7 +243,7 @@
             .then(products => {
                 const product = products[productKey];
                 if (!product) {
-                    document.body.innerHTML = '<div style="padding:4rem;text-align:center;"><h1>Product not found</h1><a href="../Portfolio_Page/code.html">Back to products</a></div>';
+                    document.body.innerHTML = '<div style="padding:4rem;text-align:center;"><h1>Product not found</h1><a href="../Portfolio/">Back to products</a></div>';
                     return;
                 }
 

@@ -125,7 +125,7 @@
 <nav aria-label="Breadcrumb" class="flex mb-4 text-on-surface-variant font-label-md gap-2">
 <a class="hover:text-primary transition-colors" href="../Home/">Home</a>
 <span>/</span>
-<a class="hover:text-primary transition-colors" href="../Blog_Page/code.html">Blog</a>
+<a class="hover:text-primary transition-colors" href="../Blog/">Blog</a>
 <span>/</span>
 <span id="breadcrumb-label" class="text-primary font-bold">Article</span>
 </nav>
@@ -179,7 +179,7 @@
 <span class="text-primary font-label-md uppercase tracking-widest mb-2 block">Knowledge Hub</span>
 <h2 class="font-headline-md text-headline-md text-on-background">Latest Trade Updates</h2>
 </div>
-<a class="hidden md:flex items-center gap-2 text-primary font-label-md" href="../Blog_Page/code.html">
+<a class="hidden md:flex items-center gap-2 text-primary font-label-md" href="../Blog/">
                         <span class="hover:underline">View All Articles</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
 </a>
@@ -201,7 +201,7 @@
             .then(articles => {
                 const article = articles[articleKey];
                 if (!article) {
-                    document.querySelector('main').innerHTML = '<div style="padding:4rem;text-align:center;"><h1>Article not found</h1><a href="../Blog_Page/code.html">Back to blog</a></div>';
+                    document.querySelector('main').innerHTML = '<div style="padding:4rem;text-align:center;"><h1>Article not found</h1><a href="../Blog/">Back to blog</a></div>';
                     return;
                 }
 
