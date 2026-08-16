@@ -2,7 +2,7 @@ backend:
   name: github
   repo: kpsavlot/kushalglobals
   branch: master
-  base_url: https://kushalglobals-auth.ksanwlot5566.workers.dev
+  base_url: https://kgcms-auth.ksanwlot5566.workers.dev
   auth_endpoint: auth
 
 publish_mode: editorial_workflow
