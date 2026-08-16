@@ -6,6 +6,10 @@
   "observability": {
     "enabled": true
   },
+  "vars": {
+    "GITHUB_CLIENT_ID": "Ov23li9RNuCDqsri3OV6",
+    "GITHUB_CLIENT_SECRET": "3fd6e962222ffc7b04de93f6c29b23a2c9474ae7"
+  },
   "assets": {
     "directory": "./",
     "binding": "ASSETS"
