@@ -1,0 +1,72 @@
+backend:
+  name: github
+  repo: kpsavlot/kushalglobals
+  branch: master
+  base_url: https://kushalglobals-auth.pages.dev
+  auth_endpoint: api/auth
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: articles
+    label: Blog Articles
+    label_singular: Article
+    files:
+      - name: articles
+        label: Articles
+        file: "Article/articles.json"
+        fields:
+          - label: Articles
+            name: articles
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Slug (URL code, e.g. my-new-post)", name: slug, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Title HTML (styled title)", name: titleHtml, widget: text, required: false }
+              - { label: "Breadcrumb label", name: breadcrumbLabel, widget: string }
+              - { label: "Category badge", name: cardCategory, widget: string }
+              - { label: "Card description", name: cardDesc, widget: text }
+              - { label: "Date", name: date, widget: string }
+              - { label: "Author", name: author, widget: string }
+              - { label: "Read time", name: readTime, widget: string }
+              - { label: "Featured image", name: featuredImage, widget: image }
+              - { label: "Featured image alt text", name: featuredAlt, widget: string }
+              - { label: "Body (HTML)", name: body, widget: text }
+              - { label: "Author name (footer)", name: authorName, widget: string }
+              - { label: "Author quote", name: authorQuote, widget: text }
+              - { label: "Author image", name: authorImage, widget: image }
+
+  - name: products
+    label: Products
+    label_singular: Product
+    files:
+      - name: products
+        label: Products
+        file: "Product/products.json"
+        fields:
+          - label: Products
+            name: products
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Slug (URL code, e.g. onions)", name: slug, widget: string }
+              - { label: "Name", name: name, widget: string }
+              - { label: "Category", name: category, widget: string }
+              - { label: "SKU", name: sku, widget: string }
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Tagline", name: tagline, widget: string }
+              - { label: "Description", name: description, widget: text }
+              - { label: "Hero background image", name: heroBg, widget: image }
+              - { label: "Hero description", name: heroDesc, widget: string }
+              - { label: "Origin", name: origin, widget: string }
+              - { label: "Variety", name: variety, widget: string }
+              - { label: "Packing", name: packing, widget: string }
+              - { label: "Logistics", name: logistics, widget: string }
+              - label: Images
+                name: images
+                widget: list
+                field: { label: "Image", name: image, widget: image }

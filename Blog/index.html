@@ -132,53 +132,7 @@
 </section>
 <!-- Blog Grid -->
 <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Blog Card 1: Market Trends -->
-<article class="group border border-outline-variant bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-xl">
-<div class="aspect-[16/10] overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Raw turmeric fingers and dried red chilies arranged in a clean layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHYCZ3LPIyLyh_tQpyo0yyoMV5AJVupYosRqbnsUUFfsVeRbViIyFxrqMf4N2NMxq7lYM3Xx37UaoebaV-0Ou66gF3tkT4liTflytc-uunyNHrBolWzkkwmZ_DN8Hz1nFdqM3aVM4zjAlVBP4cOXmlUOGVGCE0RtONwLpPIsuEB79x67fbXM-wpbybTThEVstyM-XzdB7fAskkU7Iufy6LdGU-_0vn9mRczZ6lLI7Hg7Jufgd2kyA9Kw"/>
-<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 text-caption uppercase tracking-wider">Live Analysis</div>
-</div>
-<div class="p-6">
-<span class="text-caption text-secondary mb-2 block">Live Briefing</span>
-<h3 class="font-headline-sm text-on-background mb-3 group-hover:text-primary transition-colors">Agile Agro-Market: Q2 Momentum</h3>
-<p class="text-on-surface-variant text-body-md line-clamp-3 mb-4">Real-time mapping of South Asian spice flows and shifting demand nodes across modern European supply chains.</p>
-<a class="inline-flex items-center gap-2 text-primary font-label-md hover:gap-4 transition-all" href="../Article/?article=q2-momentum">
-                        VIEW BRIEFING <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- Blog Card 2: Spice Storage -->
-<article class="group border border-outline-variant bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-xl">
-<div class="aspect-[16/10] overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern climate-controlled agricultural warehouse." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARL0D_edVyUh5pyEMSsGR002zD9ziqabba9IYcgUBNrRqPafc0AYIL5Z96A-VfYhNJJxWbQjIwLC86UsM6t9hitBMcLL_UqvyIjVo1wcwjqiQIv0BH5XMd3b2cTxj_BMNU5bq07e2acKqIDL1NO9LCwqTAsEOAd67-ry5mt2W5nMOZOYrS28QzV6o3fauIXPO53XkXVQ75cTzMBLqlnnbfNRA0U3sPFc0r4I_1W0s_y7xtDSC8_Akmvw"/>
-<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 text-caption uppercase tracking-wider">Precision Control</div>
-</div>
-<div class="p-6">
-<span class="text-caption text-secondary mb-2 block">Quality Intelligence</span>
-<h3 class="font-headline-sm text-on-background mb-3 group-hover:text-primary transition-colors">Next-Gen Preservation Tech</h3>
-<p class="text-on-surface-variant text-body-md line-clamp-3 mb-4">How we utilize dynamic sensor networks to ensure zero-variance humidity during maritime transit.</p>
-<a class="inline-flex items-center gap-2 text-primary font-label-md hover:gap-4 transition-all" href="../Article/?article=preservation-tech">
-                        TECHNICAL DATA <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- Blog Card 3: Harvest Reports -->
-<article class="group border border-outline-variant bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-xl">
-<div class="aspect-[16/10] overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Sunset over an expansive agricultural landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD806k18EEruVwjWXjbFAJl9tp5YuJOqPZp5lUR_PCuk34VehXr6hMt86dX4LPxuk7u7HSHM3nsVLNX09P1622EsNEdkMqz2JMxHcf2WVorCNoxI6wqjrdwWuiD7Dfo4gLVCdef9xia2HNQ0CIPptoAvK_Fvj-gFwRq-eyr2R93jUuKHvgwPxJKkviUs37VyOSSsIPZQbapryyoy5niKBXaAll4ic58JiYrcjFVPzpcViBm6xhNqipYw"/>
-<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 text-caption uppercase tracking-wider">Direct Sourcing</div>
-</div>
-<div class="p-6">
-<span class="text-caption text-secondary mb-2 block">Live Field Report</span>
-<h3 class="font-headline-sm text-on-background mb-3 group-hover:text-primary transition-colors">Cumin Sourcing: Grade-A Yield Mapping</h3>
-<p class="text-on-surface-variant text-body-md line-clamp-3 mb-4">Fresh data from our cluster network identifying the highest purity batches available for immediate export.</p>
-<a class="inline-flex items-center gap-2 text-primary font-label-md hover:gap-4 transition-all" href="../Article/?article=cumin-sourcing">
-                        EXPLORE YIELD <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-</div>
-</article>
-</div>
+<div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3 gap-gutter"></div>
 </section>
 
 </main>
@@ -198,6 +152,38 @@
                 });
             }
         });
+    });
+
+    // Blog cards from articles.json
+    document.addEventListener('partialsLoaded', function () {
+        fetch('../Article/articles.json')
+            .then(r => r.json())
+            .then(data => {
+                const grid = document.getElementById('blog-grid');
+                const articles = data.articles || [];
+                grid.innerHTML = '';
+                articles.forEach(function (a) {
+                    const card = document.createElement('article');
+                    card.className = 'group border border-outline-variant bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-xl';
+                    card.innerHTML =
+                        '<div class="aspect-[16/10] overflow-hidden relative">' +
+                            '<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="' + (a.featuredAlt || '').replace(/"/g, '&quot;') + '" src="' + a.featuredImage + '"/>' +
+                            '<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 text-caption uppercase tracking-wider">' + a.cardCategory + '</div>' +
+                        '</div>' +
+                        '<div class="p-6">' +
+                            '<span class="text-caption text-secondary mb-2 block">' + a.date + '</span>' +
+                            '<h3 class="font-headline-sm text-on-background mb-3 group-hover:text-primary transition-colors">' + a.title + '</h3>' +
+                            '<p class="text-on-surface-variant text-body-md line-clamp-3 mb-4">' + a.cardDesc + '</p>' +
+                            '<a class="inline-flex items-center gap-2 text-primary font-label-md hover:gap-4 transition-all" href="../Article/?article=' + a.slug + '">' +
+                                'VIEW BRIEFING <span class="material-symbols-outlined text-[18px]">arrow_forward</span>' +
+                            '</a>' +
+                        '</div>';
+                    grid.appendChild(card);
+                });
+            })
+            .catch(function () {
+                document.getElementById('blog-grid').innerHTML = '<p class="text-on-surface-variant">Unable to load articles.</p>';
+            });
     });
 </script>
 </body></html>

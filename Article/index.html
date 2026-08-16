@@ -199,8 +199,9 @@
 
         fetch('articles.json')
             .then(r => r.json())
-            .then(articles => {
-                const article = articles[articleKey];
+            .then(data => {
+                const articles = data.articles || [];
+                const article = articles.find(a => a.slug === articleKey);
                 if (!article) {
                     document.querySelector('main').innerHTML = '<div style="padding:4rem;text-align:center;"><h1>Article not found</h1><a href="../Blog/">Back to blog</a></div>';
                     return;
@@ -222,9 +223,9 @@
 
                 const relatedContainer = document.getElementById('related-articles');
                 relatedContainer.innerHTML = '';
-                const relatedKeys = Object.keys(articles).filter(k => k !== articleKey);
-                relatedKeys.slice(0, 3).forEach(function (key) {
-                    const a = articles[key];
+                const related = articles.filter(a => a.slug !== articleKey);
+                related.slice(0, 3).forEach(function (a) {
+                    const key = a.slug;
                     const card = document.createElement('div');
                     card.className = 'bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group hover:shadow-md transition-all border border-outline-variant/20 cursor-pointer';
                     card.addEventListener('click', function () {

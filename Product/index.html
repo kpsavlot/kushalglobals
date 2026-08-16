@@ -245,8 +245,9 @@
 
         fetch('products.json')
             .then(r => r.json())
-            .then(products => {
-                const product = products[productKey];
+            .then(data => {
+                const products = data.products || [];
+                const product = products.find(p => p.slug === productKey);
                 if (!product) {
                     document.body.innerHTML = '<div style="padding:4rem;text-align:center;"><h1>Product not found</h1><a href="../Portfolio/">Back to products</a></div>';
                     return;
