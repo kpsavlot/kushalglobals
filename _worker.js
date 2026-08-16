@@ -38,18 +38,6 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.pathname === '/debug') {
-      return new Response(
-        JSON.stringify({
-          clientIdSet: !!env.GITHUB_CLIENT_ID,
-          clientIdLength: (env.GITHUB_CLIENT_ID || '').length,
-          clientSecretSet: !!env.GITHUB_CLIENT_SECRET,
-          clientSecretLength: (env.GITHUB_CLIENT_SECRET || '').length,
-        }),
-        { headers: { 'Content-Type': 'application/json' } }
-      );
-    }
-
     if (url.pathname === '/auth' || url.pathname === '/callback') {
       const code = url.searchParams.get('code');
 
