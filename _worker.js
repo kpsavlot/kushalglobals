@@ -19,12 +19,18 @@ async function getAccessToken(env, code) {
   return await response.json();
 }
 
-function renderTemplate(message) {
+function callbackTemplate(status, content) {
+  const script =
+    'const receiveMessage = (message) => {' +
+    '  window.opener.postMessage(' + JSON.stringify('authorization:github:' + status + ':' + JSON.stringify(content)) + ', message.origin);' +
+    '  window.removeEventListener("message", receiveMessage, false);' +
+    '};' +
+    'window.addEventListener("message", receiveMessage, false);' +
+    'window.opener.postMessage("authorizing:github", "*");';
   const page =
     '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Authorizing</title></head>' +
-    '<body><script>function sendMsg(msg){opener.postMessage(msg, "*");window.close();}' +
-    'sendMsg(' + message + ');</script></body></html>';
-  return new Response(page, { headers: { 'Content-Type': 'text/html' } });
+    '<body><script>' + script + '</script></body></html>';
+  return new Response(page, { headers: { 'Content-Type': 'text/html;charset=UTF-8' } });
 }
 
 function redirectTemplate(url) {
@@ -44,12 +50,9 @@ export default {
       if (code) {
         const data = await getAccessToken(env, code);
         if (data.error) {
-          return renderTemplate(
-            JSON.stringify('authorization:' + PROVIDER + ':error:' + (data.error_description || data.error))
-          );
+          return callbackTemplate('error', data);
         }
-        const payload = JSON.stringify({ token: data.access_token, provider: PROVIDER });
-        return renderTemplate(JSON.stringify('authorization:' + PROVIDER + ':success:' + payload));
+        return callbackTemplate('success', { token: data.access_token, provider: PROVIDER });
       }
 
       const scope = url.searchParams.get('scope') || 'repo,user';
