@@ -265,6 +265,33 @@
                 }
 
                 document.getElementById('page-title').textContent = product.name + ' | KUSHAL GLOBALS';
+
+                const jsonLd = document.createElement('script');
+                jsonLd.type = 'application/ld+json';
+                jsonLd.textContent = JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@graph": [
+                        {
+                            "@type": "Product",
+                            "name": product.name,
+                            "description": product.heroDesc,
+                            "image": product.images,
+                            "sku": product.sku,
+                            "brand": { "@type": "Brand", "name": "Kushal Globals" },
+                            "manufacturer": { "@type": "Organization", "name": "Kushal Globals" },
+                            "category": product.variety
+                        },
+                        {
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kushalglobals.com/Home/" },
+                                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://kushalglobals.com/Portfolio/" },
+                                { "@type": "ListItem", "position": 3, "name": product.name, "item": window.location.href }
+                            ]
+                        }
+                    ]
+                });
+                document.head.appendChild(jsonLd);
                 document.getElementById('breadcrumb-product').textContent = product.name;
                 document.querySelector('#quote-form input[name="product"]').value = product.name;
                 document.getElementById('product-title').textContent = product.name;

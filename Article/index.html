@@ -219,6 +219,36 @@
                 }
 
                 document.getElementById('page-title').textContent = article.title + ' | KUSHAL GLOBALS';
+
+                const jsonLd = document.createElement('script');
+                jsonLd.type = 'application/ld+json';
+                jsonLd.textContent = JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@graph": [
+                        {
+                            "@type": "Article",
+                            "headline": article.title,
+                            "datePublished": article.date,
+                            "author": { "@type": "Organization", "name": "Kushal Globals" },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Kushal Globals",
+                                "logo": { "@type": "ImageObject", "url": "https://res.cloudinary.com/dge8i8jqs/image/upload/Kushal-Globals/photo.avif" }
+                            },
+                            "image": article.featuredImage,
+                            "description": article.heroDesc || article.title
+                        },
+                        {
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kushalglobals.com/Home/" },
+                                { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://kushalglobals.com/Blog/" },
+                                { "@type": "ListItem", "position": 3, "name": article.title, "item": window.location.href }
+                            ]
+                        }
+                    ]
+                });
+                document.head.appendChild(jsonLd);
                 document.getElementById('breadcrumb-label').textContent = article.breadcrumbLabel;
                 document.getElementById('article-title').innerHTML = article.titleHtml;
                 document.getElementById('article-date').textContent = article.date;

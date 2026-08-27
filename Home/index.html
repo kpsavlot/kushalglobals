@@ -143,7 +143,52 @@
         }
     </style>
 <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
-<style>html{scrollbar-color:#005e51 transparent;scrollbar-width:thin}html::-webkit-scrollbar{width:6px;height:6px}html::-webkit-scrollbar-track{background:transparent;border:none}html::-webkit-scrollbar-thumb{background:#005e51;border-radius:3px}html::-webkit-scrollbar-button{width:0;height:0;display:none}html::-webkit-scrollbar-corner{background:transparent}</style></head>
+<style>html{scrollbar-color:#005e51 transparent;scrollbar-width:thin}html::-webkit-scrollbar{width:6px;height:6px}html::-webkit-scrollbar-track{background:transparent;border:none}html::-webkit-scrollbar-thumb{background:#005e51;border-radius:3px}html::-webkit-scrollbar-button{width:0;height:0;display:none}html::-webkit-scrollbar-corner{background:transparent}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Kushal Globals",
+      "url": "https://kushalglobals.com",
+      "logo": "https://res.cloudinary.com/dge8i8jqs/image/upload/Kushal-Globals/photo.avif",
+      "description": "Kushal Globals - trusted merchant exporter of premium spices, vegetables, and grains from India to global markets.",
+      "email": "info@kushalglobals.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@kushalglobals.com",
+        "contactType": "customer service"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "name": "Kushal Globals",
+      "url": "https://kushalglobals.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://kushalglobals.com/Portfolio/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kushalglobals.com/Home/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
 <body class="bg-background text-on-background font-body-md overflow-x-hidden">
 <div data-include="../components/utility-bar.html"></div>
 <!-- TopAppBar: Floating Style -->
