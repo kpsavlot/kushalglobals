@@ -3,36 +3,43 @@
   <url>
     <loc>https://kushalglobals.com/Home/</loc>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://kushalglobals.com/About/</loc>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kushalglobals.com/Portfolio/</loc>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kushalglobals.com/Certificates/</loc>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kushalglobals.com/Contact/</loc>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kushalglobals.com/Blog/</loc>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kushalglobals.com/Gallery/</loc>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 </urlset>

@@ -17,6 +17,8 @@
 <meta name="twitter:description" content="Read expert insights on agricultural trade, market dynamics, and supply chain logistics from Kushal Globals.">
 <meta name="twitter:image" content="https://res.cloudinary.com/dge8i8jqs/image/upload/Kushal-Globals/photo.avif">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerpolicy="no-referrer" rel="stylesheet"/>
@@ -274,7 +276,7 @@
                     });
                     card.innerHTML =
                         '<div class="h-48 overflow-hidden">' +
-                            '<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="' + a.featuredAlt.replace(/"/g, '&quot;') + '" src="' + a.featuredImage + '"/>' +
+                            '<img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="' + a.featuredAlt.replace(/"/g, '&quot;') + '" src="' + a.featuredImage + '"/>' +
                         '</div>' +
                         '<div class="p-6">' +
                             '<span class="text-caption text-primary font-bold uppercase mb-2 block">' + a.cardCategory + '</span>' +

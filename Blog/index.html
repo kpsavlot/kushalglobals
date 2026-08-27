@@ -17,6 +17,8 @@
 <meta name="twitter:description" content="Insights on agricultural trade, market trends, and supply chain intelligence from Kushal Globals.">
 <meta name="twitter:image" content="https://res.cloudinary.com/dge8i8jqs/image/upload/Kushal-Globals/photo.avif">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerpolicy="no-referrer" rel="stylesheet"/>
@@ -200,7 +202,7 @@
                     card.className = 'group border border-outline-variant bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-xl';
                     card.innerHTML =
                         '<div class="aspect-[16/10] overflow-hidden relative">' +
-                            '<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="' + (a.featuredAlt || '').replace(/"/g, '&quot;') + '" src="' + a.featuredImage + '"/>' +
+                            '<img loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="' + (a.featuredAlt || '').replace(/"/g, '&quot;') + '" src="' + a.featuredImage + '"/>' +
                             '<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 text-caption uppercase tracking-wider">' + a.cardCategory + '</div>' +
                         '</div>' +
                         '<div class="p-6">' +
