@@ -207,6 +207,13 @@
 </div>
 </div>
 <div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">eco</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface-variant uppercase">Available Options</p>
+<p id="product-options" class="font-body-md font-semibold"></p>
+</div>
+</div>
+<div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary">inventory_2</span>
 <div>
 <p class="text-label-md font-label-md text-on-surface-variant uppercase">Standard Packing</p>
@@ -313,6 +320,7 @@
                 document.getElementById('product-description').textContent = product.description;
                 document.getElementById('product-origin').textContent = product.origin;
                 document.getElementById('product-variety').textContent = product.variety;
+                document.getElementById('product-options').textContent = product.options || '';
                 document.getElementById('product-packing').textContent = product.packing;
                 document.getElementById('product-logistics').textContent = product.logistics;
 
